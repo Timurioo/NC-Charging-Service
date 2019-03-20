@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ContentTableComponent } from './content-table/content-table.component';
 import { LandingComponent } from './landing/landing.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LandingComponent } from './landing/landing.component';
     LoginComponent,
     RegisterComponent,
     ContentTableComponent,
-    LandingComponent
+    LandingComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
