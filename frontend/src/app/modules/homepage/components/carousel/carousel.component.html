@@ -1,0 +1,20 @@
+<ngb-carousel *ngIf="image">
+  <ng-template ngbSlide>
+    <img class="img-fluid" [src]="image[0]" alt="first slide">
+    <div class="carousel-caption">
+      <h3>Best place to buy MS Office</h3>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img class="img-fluid" [src]="image[1]" alt="second slide">
+    <div class="carousel-caption">
+      <h3 class="text-light">Fair prices</h3>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img class="img-fluid" [src]="image[2]" alt="third slide">
+    <div class="carousel-caption">
+      <h3>Works on all devices</h3>
+    </div>
+  </ng-template>
+</ngb-carousel>
