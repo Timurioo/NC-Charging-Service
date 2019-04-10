@@ -30,7 +30,7 @@ public class SubscriptionEntity {
     }
 
     @Basic
-    @Column(name = "PRODUCT")
+    @Column(name = "product")
     public String getProduct() {
         return product;
     }
@@ -40,7 +40,7 @@ public class SubscriptionEntity {
     }
 
     @Basic
-    @Column(name = "DATE")
+    @Column(name = "purchase_date")
     public Date getDate() {
         return date;
     }

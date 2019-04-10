@@ -1,30 +1,26 @@
-package com.netcracker.chargingservice.backend.entity;
+package com.netcracker.chargingservice.fapi.models;
 
-import javax.persistence.*;
-
-@Entity
-@Table(name = "content", schema = "charging_service")
-public class ContentEntity {
+public class Content {
     private int id;
     private String itemName;
     private String pictureUrl;
     private String description;
     private Integer cost;
-    private UserProfileEntity userProfileId;
-    private SubscriptionEntity subscriptionId;
+    private int userProfileId;
+    private int subscriptionId;
 
-    public ContentEntity(String itemName, String pictureUrl, String description, Integer cost) {
+    public Content(String itemName, String pictureUrl, String description, Integer cost, int userProfileId, int subscriptionId) {
         this.itemName = itemName;
         this.pictureUrl = pictureUrl;
         this.description = description;
         this.cost = cost;
+        this.userProfileId = userProfileId;
+        this.subscriptionId = subscriptionId;
     }
 
-    public ContentEntity() {
+    public Content() {
     }
 
-    @Id
-    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -33,8 +29,6 @@ public class ContentEntity {
         this.id = id;
     }
 
-    @Basic
-    @Column(name = "item_name")
     public String getItemName() {
         return itemName;
     }
@@ -43,8 +37,6 @@ public class ContentEntity {
         this.itemName = itemName;
     }
 
-    @Basic
-    @Column(name = "picture_url")
     public String getPictureUrl() {
         return pictureUrl;
     }
@@ -53,8 +45,6 @@ public class ContentEntity {
         this.pictureUrl = pictureUrl;
     }
 
-    @Basic
-    @Column(name = "description")
     public String getDescription() {
         return description;
     }
@@ -63,8 +53,6 @@ public class ContentEntity {
         this.description = description;
     }
 
-    @Basic
-    @Column(name = "cost")
     public Integer getCost() {
         return cost;
     }
@@ -73,12 +61,28 @@ public class ContentEntity {
         this.cost = cost;
     }
 
+    public int getUserProfileId() {
+        return userProfileId;
+    }
+
+    public void setUserProfileId(int userProfileId) {
+        this.userProfileId = userProfileId;
+    }
+
+    public int getSubscriptionId() {
+        return subscriptionId;
+    }
+
+    public void setSubscriptionId(int subscriptionId) {
+        this.subscriptionId = subscriptionId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        ContentEntity that = (ContentEntity) o;
+        Content that = (Content) o;
 
         if (id != that.id) return false;
         if (itemName != null ? !itemName.equals(that.itemName) : that.itemName != null) return false;
@@ -97,25 +101,5 @@ public class ContentEntity {
         result = 31 * result + (description != null ? description.hashCode() : 0);
         result = 31 * result + (cost != null ? cost.hashCode() : 0);
         return result;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "user_profile_id", referencedColumnName = "id", nullable = true)
-    public UserProfileEntity getUserProfileId() {
-        return userProfileId;
-    }
-
-    public void setUserProfileId(UserProfileEntity userProfileId) {
-        this.userProfileId = userProfileId;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "subscription_id", referencedColumnName = "id", nullable = true)
-    public SubscriptionEntity getSubscriptionId() {
-        return subscriptionId;
-    }
-
-    public void setSubscriptionId(SubscriptionEntity subscriptionId) {
-        this.subscriptionId = subscriptionId;
     }
 }

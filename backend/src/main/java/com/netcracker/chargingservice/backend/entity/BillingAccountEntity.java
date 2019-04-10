@@ -28,7 +28,7 @@ public class BillingAccountEntity {
     }
 
     @Basic
-    @Column(name = "FUNDS")
+    @Column(name = "funds")
     public int getFunds() {
         return funds;
     }
@@ -38,7 +38,7 @@ public class BillingAccountEntity {
     }
 
     @Basic
-    @Column(name = "ISACTIVE")
+    @Column(name = "is_active")
     public Byte getIsActive() {
         return isActive;
     }

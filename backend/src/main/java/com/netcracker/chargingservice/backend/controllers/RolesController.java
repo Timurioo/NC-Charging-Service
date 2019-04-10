@@ -1,6 +1,6 @@
 package com.netcracker.chargingservice.backend.controllers;
 
-import com.netcracker.chargingservice.backend.entity.RolesEntity;
+import com.netcracker.chargingservice.backend.entity.RoleEntity;
 import com.netcracker.chargingservice.backend.service.RolesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -8,21 +8,21 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(path="/test-roles")
+@RequestMapping(path="/api/roles")
 public class RolesController {
 
     @Autowired
     private RolesService rolesService;
 
-    @GetMapping(path="/all-roles")
+    @GetMapping(path="/all")
     public @ResponseBody
-    List<RolesEntity> getAllRoles() {
+    List<RoleEntity> getAllRoles() {
         return rolesService.findAll();
     }
 
-    @GetMapping(path="/add-roles")
+    @PostMapping(path="/add")
     public @ResponseBody String addNewRole(@RequestParam String name) {
-        RolesEntity role = new RolesEntity(name);
+        RoleEntity role = new RoleEntity(name);
         rolesService.save(role);
         return "Saved";
     }

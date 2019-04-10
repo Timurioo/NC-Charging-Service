@@ -12,9 +12,10 @@ public class UserProfileEntity {
     private Byte isBlocked;
     private String firstName;
     private String lastName;
-    private RolesEntity rolesId;
+    private RoleEntity rolesId;
 
-    public UserProfileEntity(String email, String pass, String login, Byte isBlocked, String firstName, String lastName) {
+    public UserProfileEntity(String email, String pass, String login,
+                             Byte isBlocked, String firstName, String lastName) {
         this.email = email;
         this.pass = pass;
         this.login = login;
@@ -36,7 +37,7 @@ public class UserProfileEntity {
     }
 
     @Basic
-    @Column(name = "EMAIL")
+    @Column(name = "email")
     public String getEmail() {
         return email;
     }
@@ -46,7 +47,7 @@ public class UserProfileEntity {
     }
 
     @Basic
-    @Column(name = "PASS")
+    @Column(name = "password")
     public String getPass() {
         return pass;
     }
@@ -56,7 +57,7 @@ public class UserProfileEntity {
     }
 
     @Basic
-    @Column(name = "LOGIN")
+    @Column(name = "login")
     public String getLogin() {
         return login;
     }
@@ -66,17 +67,17 @@ public class UserProfileEntity {
     }
 
     @Basic
-    @Column(name = "ISBLOCKED")
-    public Byte getIsblocked() {
+    @Column(name = "is_blocked")
+    public Byte getIsBlocked() {
         return isBlocked;
     }
 
-    public void setIsblocked(Byte isblocked) {
+    public void setIsBlocked(Byte isblocked) {
         this.isBlocked = isblocked;
     }
 
     @Basic
-    @Column(name = "FIRST_NAME")
+    @Column(name = "first_name")
     public String getFirstName() {
         return firstName;
     }
@@ -86,7 +87,7 @@ public class UserProfileEntity {
     }
 
     @Basic
-    @Column(name = "LAST_NAME")
+    @Column(name = "last_name")
     public String getLastName() {
         return lastName;
     }
@@ -127,11 +128,11 @@ public class UserProfileEntity {
 
     @ManyToOne
     @JoinColumn(name = "roles_id", referencedColumnName = "id", nullable = false)
-    public RolesEntity getRolesId() {
+    public RoleEntity getRolesId() {
         return rolesId;
     }
 
-    public void setRolesId(RolesEntity rolesId) {
+    public void setRolesId(RoleEntity rolesId) {
         this.rolesId = rolesId;
     }
 }

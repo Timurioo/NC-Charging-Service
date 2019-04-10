@@ -1,6 +1,6 @@
 package com.netcracker.chargingservice.backend.controllers;
 
-import com.netcracker.chargingservice.backend.entity.RolesEntity;
+import com.netcracker.chargingservice.backend.entity.RoleEntity;
 import com.netcracker.chargingservice.backend.entity.UserProfileEntity;
 import com.netcracker.chargingservice.backend.service.UserProfileService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ public class UserProfileController {
     @GetMapping(path="/add")
     public @ResponseBody String addNewUser(@RequestParam String email, @RequestParam String password,
                                            @RequestParam String login, @RequestParam byte isBlocked, @RequestParam String firstName,
-                                           @RequestParam String lastName, @RequestParam RolesEntity rolesId) {
+                                           @RequestParam String lastName, @RequestParam RoleEntity rolesId) {
         UserProfileEntity user = new UserProfileEntity(email, password, login, isBlocked, firstName, lastName);
         user.setRolesId(rolesId);
         userProfileService.save(user);

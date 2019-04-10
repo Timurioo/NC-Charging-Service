@@ -4,15 +4,15 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "roles", schema = "charging_service")
-public class RolesEntity {
+public class RoleEntity {
     private int id;
     private String name;
 
-    public RolesEntity(String name) {
+    public RoleEntity(String name) {
         this.name = name;
     }
 
-    public RolesEntity() {}
+    public RoleEntity() {}
 
     @Id
     @Column(name = "id")
@@ -25,7 +25,7 @@ public class RolesEntity {
     }
 
     @Basic
-    @Column(name = "NAME")
+    @Column(name = "name")
     public String getName() {
         return name;
     }
@@ -39,7 +39,7 @@ public class RolesEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        RolesEntity that = (RolesEntity) o;
+        RoleEntity that = (RoleEntity) o;
 
         if (id != that.id) return false;
         if (name != null ? !name.equals(that.name) : that.name != null) return false;

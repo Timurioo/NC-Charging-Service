@@ -1,92 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86db2d10-23ce-4b7f-91d7-924816cd0f93" name="Default Changelist" comment="Organizing frontend structure into modules and connecting fapi with backend">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_0_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_0_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_0_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/controllers/RolesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/controllers/UserProfileController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/BillingAccountEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/ContentEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/RolesEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/SubscriptionEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/UserProfileEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/repository/BillingAccountRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/repository/ContentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/repository/RolesRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/repository/SubscriptionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/BillingAccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/ContentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/RolesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/SubscriptionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/impl/BillingAccountServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/impl/ContentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/impl/RolesServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/impl/SubscriptionServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/impl/UserProfileServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/filter/CORSFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/models/BillingAccountViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/models/LoginUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/models/UserProfile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/security/JwtAuthenticationEntryPoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/security/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/security/SecurityJwtConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/security/TokenProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/security/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/service/BillingAccountDataService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/service/UserProfileService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/service/impl/BillingAccountDataServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/service/impl/UserProfileServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/modules/layout/components/navbar/navbar.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4e164d50-f643-4bbf-9157-670b60acb0cc.xml" beforeDir="false" />
+    <list default="true" id="86db2d10-23ce-4b7f-91d7-924816cd0f93" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/controllers/ContentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/controllers/ContentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/models/Content.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/service/ContentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/service/impl/ContentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/proxy.conf.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/modules/auth/models/user-profile.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/content-table/models/content.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/BackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/BackendApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/BillingAccount.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/UserProfile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/repository/UserProfileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/repository/UserProfileRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/UserProfileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/UserProfileService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/Controllers/SimpleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/controllers/UserProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/controllers/RolesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/controllers/RolesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/controllers/UserProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/controllers/UserProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/BillingAccountEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/BillingAccountEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/ContentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/ContentEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/RolesEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/RoleEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/SubscriptionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/SubscriptionEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/UserProfileEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/UserProfileEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/repository/RolesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/repository/RolesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/RolesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/RolesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/impl/RolesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/impl/RolesServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/models/UserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/models/UserProfile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/carousel/carousel.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/models/AuthToken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/carousel/carousel.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/carousel/carousel.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/carousel/carousel.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/carousel/carousel.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/carousel/carousel.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/carousel/carousel.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/content-table/content-table.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/carousel/carousel.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/content-table/content-table.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/content-table/content-table.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/content-table/content-table.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/content-table/content-table.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/content-table/content-table.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/content-table/content-table.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/landing/landing.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/content-table/content-table.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/landing/landing.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/landing/landing.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/landing/landing.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/landing/landing.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/landing/landing.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/landing/landing.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/login/login.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/auth/components/login/login.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/auth/components/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/login/login.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/auth/components/login/login.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/auth/components/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/navbar/navbar.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/landing/landing.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/layout/components/navbar/navbar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/navbar/navbar.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/layout/components/navbar/navbar.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/navbar/navbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/layout/components/navbar/navbar.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/register/register.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/auth/components/register/register.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/auth/components/register/register.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/register/register.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/auth/components/register/register.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/auth/components/register/register.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/user-profile/user-profile.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/auth/components/user-profile/user-profile.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/user-profile/user-profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/auth/components/user-profile/user-profile.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/user-profile/user-profile.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/auth/components/user-profile/user-profile.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/user-profile/user-profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/auth/components/user-profile/user-profile.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/content-table/content-table.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/content-table/content-table.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/content-table/content-table.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/content-table/content-table.component.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/fapi/target/" />
     <ignored path="$PROJECT_DIR$/backend/target/" />
@@ -131,42 +69,21 @@
         <item name="charging_service" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="charging_service: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="billing_account: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="content: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/controllers/UserProfileController.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/controllers/ContentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+            <state relative-caret-position="323">
+              <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/app/modules/auth/auth.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/fapi/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="45" column="21" lean-forward="true" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -177,6 +94,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -186,28 +104,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/BillingAccount.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/Roles.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/Subscription.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/UserProfile.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/repository/SubsriptionRepository.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/BackendApplication.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/3af4183f-4546-472e-9a86-ab945d3b52ca/console.sql" />
-        <option value="$PROJECT_DIR$/backend/META-INF/persistence.xml" />
-        <option value="$PROJECT_DIR$/backend/pom.xml" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/f651e8f4-15ad-4964-827c-340a11cfd1ed/console.sql" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/testing/SubscriptionEntity.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/resources/application.properties" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/3cc12fbb-b10c-40c4-833b-99a3607ffbb9/console.sql" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/RolesEntity.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/BillingAccountEntity.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/ContentEntity.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/SubscriptionEntity.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/controllers/RolesController.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/UserProfileEntity.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/repository/RolesRepository.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/repository/ContentRepository.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/repository/BillingAccountRepository.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/repository/SubscriptionRepository.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/repository/UserProfileRepository.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/impl/ContentServiceImpl.java" />
@@ -237,6 +133,28 @@
         <option value="$PROJECT_DIR$/frontend/angular.json" />
         <option value="$PROJECT_DIR$/frontend/src/app/wallet-page/wallet-page.component.ts" />
         <option value="$PROJECT_DIR$/fapi/pom.xml" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/3cc12fbb-b10c-40c4-833b-99a3607ffbb9/console.sql" />
+        <option value="$PROJECT_DIR$/frontend/src/app/modules/auth/models/user-profile.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/services/user-profile.service.ts" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/repository/ContentRepository.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/controllers/RolesController.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/BillingAccountEntity.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/RolesEntity.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/SubscriptionEntity.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/UserProfileEntity.java" />
+        <option value="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/models/UserProfile.java" />
+        <option value="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/service/ContentService.java" />
+        <option value="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/controllers/ContentController.java" />
+        <option value="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/service/impl/ContentServiceImpl.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/frontend/src/app/services/content.service.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/content-table/models/content.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/content-table/content-table.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/content-table/content-table.component.html" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/ContentEntity.java" />
+        <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/controllers/ContentController.java" />
+        <option value="$PROJECT_DIR$/frontend/package.json" />
+        <option value="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/models/Content.java" />
       </list>
     </option>
   </component>
@@ -261,17 +179,13 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="NC-Charging-Service" type="b2602c69:ProjectViewProjectNode" />
               <item name="NC-Charging-Service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NC-Charging-Service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NC-Charging-Service" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NC-Charging-Service" type="b2602c69:ProjectViewProjectNode" />
@@ -291,11 +205,79 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="NC-Charging-Service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NC-Charging-Service" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NC-Charging-Service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NC-Charging-Service" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="homepage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NC-Charging-Service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NC-Charging-Service" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="homepage" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NC-Charging-Service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NC-Charging-Service" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="homepage" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="carousel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NC-Charging-Service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NC-Charging-Service" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="homepage" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="content-table" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NC-Charging-Service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NC-Charging-Service" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="homepage" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="content-table" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NC-Charging-Service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NC-Charging-Service" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -307,7 +289,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554493533328" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554930219527" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
@@ -321,9 +303,12 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.netcracker.chargingservice.fapi.service.impl" />
+      <recent name="com.netcracker.chargingservice.fapi.service" />
       <recent name="com.netcracker.chargingservice.fapi.models" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ThinkPad\IdeaProjects\NC-Charging-Service\frontend" />
       <recent name="C:\Users\ThinkPad\IdeaProjects\NC-Charging-Service\frontend\src\app\modules" />
       <recent name="C:\Users\ThinkPad\IdeaProjects\NC-Charging-Service\frontend\src\app\auth" />
       <recent name="C:\Users\ThinkPad\IdeaProjects\NC-Charging-Service\frontend\src\app\homepage" />
@@ -336,6 +321,7 @@
       <recent name="com.netcracker.chargingservice.backend" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ThinkPad\IdeaProjects\NC-Charging-Service\frontend\src" />
       <recent name="C:\Users\ThinkPad\IdeaProjects\NC-Charging-Service\fapi\src\main\java\com\netcracker\chargingservice\fapi" />
       <recent name="C:\Users\ThinkPad\IdeaProjects\NC-Charging-Service\fapi\src\main\java\com\netcracker\chargingservice\fapi\models" />
       <recent name="C:\Users\ThinkPad\IdeaProjects\NC-Charging-Service\backend\src\main\java\com\netcracker\chargingservice\backend\testing" />
@@ -358,8 +344,9 @@
         </RuleState>
       </list>
     </option>
+    <option name="contentProportion" value="0.21097372" />
   </component>
-  <component name="RunManager" selected="Spring Boot.BackendApplication">
+  <component name="RunManager" selected="Spring Boot.FapiApplication">
     <configuration name="app.component.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/NC-Charging-Service/frontend/src/app/app.component.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -403,7 +390,10 @@
       <workItem from="1554105809189" duration="4853000" />
       <workItem from="1554137463882" duration="11671000" />
       <workItem from="1554384702035" duration="22893000" />
-      <workItem from="1554730577098" duration="404000" />
+      <workItem from="1554730577098" duration="682000" />
+      <workItem from="1554742491355" duration="7263000" />
+      <workItem from="1554905119006" duration="11430000" />
+      <workItem from="1554929487047" duration="834000" />
     </task>
     <task id="LOCAL-00001" summary="Adding basic structure of my application">
       <created>1552761848815</created>
@@ -440,17 +430,24 @@
       <option name="project" value="LOCAL" />
       <updated>1553849358443</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Organizing frontend structure into modules and connecting fapi with backend">
+      <created>1554731256984</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1554731256984</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63865000" />
+    <option name="totallyTimeSpent" value="83670000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.55394524" visible="true" weight="0.28668684" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.56675065" visible="true" weight="0.2549168" />
       <window_info id="Structure" order="1" sideWeight="0.44604316" side_tool="true" weight="0.22239032" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -458,9 +455,9 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
-      <window_info id="Persistence" order="8" sideWeight="0.44605476" side_tool="true" weight="0.18910742" />
+      <window_info id="Persistence" order="8" sideWeight="0.43324938" side_tool="true" weight="0.290469" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32850242" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -468,14 +465,14 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32850242" />
       <window_info anchor="bottom" id="TypeScript" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.30917874" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.4299517" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32850242" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32850242" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.32850242" />
-      <window_info active="true" anchor="bottom" id="Messages" order="15" visible="true" weight="0.26086956" />
-      <window_info anchor="bottom" id="Run Dashboard" order="16" weight="0.49597424" />
+      <window_info anchor="bottom" id="Messages" order="15" weight="0.26086956" />
+      <window_info anchor="bottom" id="Run Dashboard" order="16" weight="0.41223833" />
       <window_info anchor="bottom" id="Database Console" order="17" weight="0.32850242" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -486,8 +483,47 @@
       <window_info anchor="right" id="Database" order="6" weight="0.24810892" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.32980332" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.56675065" visible="true" weight="0.29500756" />
+      <window_info id="Structure" order="1" sideWeight="0.44604316" side_tool="true" weight="0.22239032" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info id="Persistence" order="8" sideWeight="0.43324938" side_tool="true" weight="0.290469" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32850242" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.32850242" />
+      <window_info anchor="bottom" id="TypeScript" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.28502417" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32850242" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.32850242" />
+      <window_info anchor="bottom" id="Messages" order="15" weight="0.26086956" />
+      <window_info anchor="bottom" id="Run Dashboard" order="16" weight="0.49114332" />
+      <window_info anchor="bottom" id="Database Console" order="17" weight="0.32850242" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.24810892" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.32980332" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -501,350 +537,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Organizing frontend structure into modules and connecting fapi with backend" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3cc12fbb-b10c-40c4-833b-99a3607ffbb9/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/BillingAccountEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="12" column="59" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/SubscriptionEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-          <folding>
-            <element signature="e#1817#1818#0" expanded="true" />
-            <element signature="e#1873#1874#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/ContentEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
-          <folding>
-            <element signature="e#2817#2818#0" expanded="true" />
-            <element signature="e#2869#2870#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/RolesEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-          <folding>
-            <element signature="e#286#287#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/controllers/RolesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/repository/ContentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="80" selection-start-line="7" selection-start-column="80" selection-end-line="7" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/repository/RolesRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="76" selection-start-line="7" selection-start-column="76" selection-end-line="7" selection-end-column="76" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/repository/BillingAccountRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="94" selection-start-line="5" selection-start-column="94" selection-end-line="5" selection-end-column="94" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/repository/SubscriptionRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="90" selection-start-line="9" selection-start-column="90" selection-end-line="9" selection-end-column="90" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/impl/ContentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/impl/RolesServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#584#585#0" expanded="true" />
-            <element signature="e#652#653#0" expanded="true" />
-            <element signature="e#934#935#0" expanded="true" />
-            <element signature="e#980#981#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/impl/SubscriptionServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#663#664#0" expanded="true" />
-            <element signature="e#745#746#0" expanded="true" />
-            <element signature="e#1074#1075#0" expanded="true" />
-            <element signature="e#1127#1128#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/ContentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/RolesService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/SubscriptionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/impl/BillingAccountServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/BillingAccountService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="64" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/Controllers/SimpleController.java" />
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/security/SecurityJwtConstants.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/security/TokenProvider.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/security/JwtAuthenticationEntryPoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="13" column="59" selection-start-line="13" selection-start-column="59" selection-end-line="13" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/filter/CORSFilter.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/models/AuthToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#172#173#0" expanded="true" />
-            <element signature="e#206#207#0" expanded="true" />
-            <element signature="e#238#239#0" expanded="true" />
-            <element signature="e#266#267#0" expanded="true" />
-            <element signature="e#308#309#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/service.java" />
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/models/BillingAccountViewModel.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/service/BillingAccountDataService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/service/impl/BillingAccountDataServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/security/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="70" selection-start-line="11" selection-start-column="70" selection-end-line="11" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/security/JwtAuthenticationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/models/LoginUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/controllers/UserProfileController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="35" column="53" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/repository/UserProfileRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/impl/UserProfileServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
-          <folding>
-            <element signature="e#785#786#0" expanded="true" />
-            <element signature="e#848#849#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/UserProfileEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="16" column="119" selection-start-line="16" selection-start-column="119" selection-end-line="16" selection-end-column="119" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/UserProfileService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="101">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/models/UserProfile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/service/UserProfileService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/service/impl/UserProfileServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -892,20 +588,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/modules/auth/wallet-page/wallet-page.component.ts" />
     <entry file="file://$PROJECT_DIR$/frontend/src/app/modules/auth/wallet-page/wallet-page.component.html" />
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/controllers/UserProfileController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/modules/auth/auth.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        <state relative-caret-position="408">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -914,8 +600,338 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fapi/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="45" column="21" lean-forward="true" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+        <state relative-caret-position="539">
+          <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/controllers/UserProfileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/modules/auth/models/user-profile.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/repository/ContentRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/repository/BillingAccountRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="94" selection-start-line="5" selection-start-column="94" selection-end-line="5" selection-end-column="94" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/services/user-profile.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/impl/RolesServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/ContentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/controllers/RolesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="25" column="32" lean-forward="true" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/BillingAccountEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/RoleEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/SubscriptionEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/UserProfileEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/impl/ContentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/models/UserProfile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+          <folding>
+            <element signature="e#1149#1150#0" expanded="true" />
+            <element signature="e#1181#1182#0" expanded="true" />
+            <element signature="e#1231#1232#0" expanded="true" />
+            <element signature="e#1273#1274#0" expanded="true" />
+            <element signature="e#1308#1309#0" expanded="true" />
+            <element signature="e#1339#1340#0" expanded="true" />
+            <element signature="e#1387#1388#0" expanded="true" />
+            <element signature="e#1427#1428#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/service/UserProfileService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/service/impl/UserProfileServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="20" lean-forward="true" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/service/impl/BillingAccountDataServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31">
+          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/service/BillingAccountDataService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/controllers/UserProfileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://3cc12fbb-b10c-40c4-833b-99a3607ffbb9/schema/charging_service/table/content" />
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/service/impl/ContentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="21" column="98" selection-start-line="21" selection-start-column="98" selection-end-line="21" selection-end-column="98" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/modules/homepage/components/carousel/carousel.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="15" lean-forward="true" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/modules/homepage/components/content-table/content-table.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://3cc12fbb-b10c-40c4-833b-99a3607ffbb9/schema/charging_service/table/content">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://3cc12fbb-b10c-40c4-833b-99a3607ffbb9/schema/charging_service/table/content">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://3cc12fbb-b10c-40c4-833b-99a3607ffbb9/schema/charging_service/table/content">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://3cc12fbb-b10c-40c4-833b-99a3607ffbb9/schema/charging_service/table/content">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3cc12fbb-b10c-40c4-833b-99a3607ffbb9/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="32" selection-start-column="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/proxy.conf.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/modules/homepage/components/carousel/carousel.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/service/ContentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/ContentEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="62" column="38" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/controllers/ContentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/modules/homepage/components/content-table/content-table.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="14" column="45" lean-forward="true" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/services/content.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/models/Content.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/modules/homepage/components/content-table/models/content.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/controllers/ContentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
