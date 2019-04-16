@@ -2,29 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86db2d10-23ce-4b7f-91d7-924816cd0f93" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/controllers/ContentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/controllers/ContentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/models/Content.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/service/ContentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/service/impl/ContentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/proxy.conf.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/modules/auth/models/user-profile.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/content-table/models/content.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/controllers/RolesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/controllers/RolesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/controllers/UserProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/controllers/UserProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/BillingAccountEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/BillingAccountEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/ContentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/ContentEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/RolesEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/RoleEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/SubscriptionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/SubscriptionEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/UserProfileEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/UserProfileEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/repository/RolesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/repository/RolesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/RolesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/RolesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/impl/RolesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/impl/RolesServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/models/UserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/models/UserProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/modules/auth/components/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/auth/components/register/register.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/carousel/carousel.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/carousel/carousel.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/content-table/content-table.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/content-table/content-table.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/content-table/content-table.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/content-table/content-table.component.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/fapi/target/" />
     <ignored path="$PROJECT_DIR$/backend/target/" />
@@ -76,14 +57,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/controllers/ContentController.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/modules/homepage/components/carousel/carousel.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="34">
+              <caret line="2" column="49" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/src/app/modules/homepage/components/content-table/content-table.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -104,8 +91,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/repository/SubscriptionRepository.java" />
-        <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/repository/UserProfileRepository.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/impl/ContentServiceImpl.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/impl/RolesServiceImpl.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/impl/SubscriptionServiceImpl.java" />
@@ -146,15 +131,17 @@
         <option value="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/service/ContentService.java" />
         <option value="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/controllers/ContentController.java" />
         <option value="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/service/impl/ContentServiceImpl.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/frontend/src/app/services/content.service.ts" />
         <option value="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/content-table/models/content.ts" />
         <option value="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/content-table/content-table.component.ts" />
-        <option value="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/content-table/content-table.component.html" />
         <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/entity/ContentEntity.java" />
         <option value="$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/controllers/ContentController.java" />
         <option value="$PROJECT_DIR$/frontend/package.json" />
         <option value="$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/models/Content.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/frontend/src/app/modules/auth/components/register/register.component.html" />
+        <option value="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/carousel/carousel.component.html" />
+        <option value="$PROJECT_DIR$/frontend/src/app/modules/homepage/components/content-table/content-table.component.html" />
       </list>
     </option>
   </component>
@@ -178,8 +165,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -192,92 +177,12 @@
               <item name="NC-Charging-Service" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="NC-Charging-Service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NC-Charging-Service" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NC-Charging-Service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NC-Charging-Service" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NC-Charging-Service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NC-Charging-Service" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NC-Charging-Service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NC-Charging-Service" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="homepage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NC-Charging-Service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NC-Charging-Service" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="homepage" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NC-Charging-Service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NC-Charging-Service" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="homepage" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="carousel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NC-Charging-Service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NC-Charging-Service" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="homepage" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="content-table" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NC-Charging-Service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NC-Charging-Service" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="homepage" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="content-table" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NC-Charging-Service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NC-Charging-Service" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -289,12 +194,13 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554930426766" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555348316918" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -346,7 +252,7 @@
     </option>
     <option name="contentProportion" value="0.21097372" />
   </component>
-  <component name="RunManager" selected="Spring Boot.FapiApplication">
+  <component name="RunManager" selected="npm.start">
     <configuration name="app.component.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/NC-Charging-Service/frontend/src/app/app.component.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -364,8 +270,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/frontend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start" />
         <item itemvalue="JavaScript Debug.app.component.html" />
       </list>
     </recent_temporary>
@@ -393,7 +310,9 @@
       <workItem from="1554730577098" duration="682000" />
       <workItem from="1554742491355" duration="7263000" />
       <workItem from="1554905119006" duration="11430000" />
-      <workItem from="1554929487047" duration="834000" />
+      <workItem from="1554929487047" duration="954000" />
+      <workItem from="1554975163135" duration="1156000" />
+      <workItem from="1555346050128" duration="1513000" />
     </task>
     <task id="LOCAL-00001" summary="Adding basic structure of my application">
       <created>1552761848815</created>
@@ -437,17 +356,30 @@
       <option name="project" value="LOCAL" />
       <updated>1554731256984</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Adding simple end-to-end with db and content table connection">
+      <created>1554930407426</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1554930407426</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Adding simple end-to-end with db and content table connection">
+      <created>1554930455685</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1554930455685</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83670000" />
+    <option name="totallyTimeSpent" value="86459000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.56675065" visible="true" weight="0.2549168" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.56675065" visible="true" weight="0.2624811" />
       <window_info id="Structure" order="1" sideWeight="0.44604316" side_tool="true" weight="0.22239032" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -458,21 +390,21 @@
       <window_info id="Persistence" order="8" sideWeight="0.43324938" side_tool="true" weight="0.290469" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32850242" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32850242" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32850242" />
       <window_info anchor="bottom" id="TypeScript" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.4299517" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.2431562" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32850242" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32850242" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.32850242" />
       <window_info anchor="bottom" id="Messages" order="15" weight="0.26086956" />
-      <window_info anchor="bottom" id="Run Dashboard" order="16" weight="0.41223833" />
+      <window_info anchor="bottom" id="Run Dashboard" order="16" weight="0.4573269" />
       <window_info anchor="bottom" id="Database Console" order="17" weight="0.32850242" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -534,19 +466,10 @@
     <MESSAGE value="Adding carousel component" />
     <MESSAGE value="Adding Spring Data JPA and starting to enable connections with DB" />
     <MESSAGE value="Organizing frontend structure into modules and connecting fapi with backend" />
-    <option name="LAST_COMMIT_MESSAGE" value="Organizing frontend structure into modules and connecting fapi with backend" />
+    <MESSAGE value="Adding simple end-to-end with db and content table connection" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding simple end-to-end with db and content table connection" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backend/src/main/java/com/netcracker/chargingservice/backend/service/UserProfileService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.0.8.RELEASE/spring-security-core-5.0.8.RELEASE.jar!/org/springframework/security/access/prepost/PreAuthorize.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -784,7 +707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://3cc12fbb-b10c-40c4-833b-99a3607ffbb9/schema/charging_service/table/content" />
     <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/service/impl/ContentServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -798,13 +720,6 @@
     <entry file="file://$PROJECT_DIR$/frontend/tsconfig.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/modules/homepage/components/carousel/carousel.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="15" lean-forward="true" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/modules/homepage/components/content-table/content-table.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -812,48 +727,6 @@
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3cc12fbb-b10c-40c4-833b-99a3607ffbb9/schema/charging_service/table/content">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3cc12fbb-b10c-40c4-833b-99a3607ffbb9/schema/charging_service/table/content">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3cc12fbb-b10c-40c4-833b-99a3607ffbb9/schema/charging_service/table/content">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3cc12fbb-b10c-40c4-833b-99a3607ffbb9/schema/charging_service/table/content">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3cc12fbb-b10c-40c4-833b-99a3607ffbb9/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="32" selection-start-column="32" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -894,13 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/app/modules/homepage/components/content-table/content-table.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="14" column="45" lean-forward="true" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/services/content.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -911,13 +777,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/models/Content.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/app/modules/homepage/components/content-table/models/content.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -925,13 +784,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/models/Content.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://3cc12fbb-b10c-40c4-833b-99a3607ffbb9/schema/charging_service/table/content" />
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/modules/auth/components/register/register.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="51" lean-forward="true" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
+          <folding>
+            <element signature="e#282#289#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fapi/src/main/java/com/netcracker/chargingservice/fapi/controllers/ContentController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="42" lean-forward="true" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="58" lean-forward="true" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3cc12fbb-b10c-40c4-833b-99a3607ffbb9/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="32" selection-start-column="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/modules/homepage/components/carousel/carousel.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="49" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/app/modules/homepage/components/content-table/content-table.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
