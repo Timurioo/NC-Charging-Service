@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { Component } from '@angular/core';
+import { Subscription } from "rxjs";
+import { UserProfileService } from "../../../../services/user-profile/user-profile.service";
+import { UserProfile } from "src/app/models/user-profile";
+import {Role} from "../../../../models/role";
 
 @Component({
   selector: 'app-register',
@@ -10,23 +13,58 @@ export class RegisterComponent {
 
   closeResult: string;
 
-  constructor(private modalService: NgbModal) {}
+  constructor(private userProfileService: UserProfileService) { }
 
-  open(content) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
-      this.closeResult = `Closed with: ${result}`;
-    }, (reason) => {
-      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-    });
+  
+  public editMode = false;
+
+  public users: UserProfile[];
+  public editableUserProfile: UserProfile = new UserProfile();
+  public existingEmail: boolean;
+
+  private subscriptions: Subscription[] = [];
+
+  ngOnInit() {
   }
 
-  private getDismissReason(reason: any): string {
-    if (reason === ModalDismissReasons.ESC) {
-      return 'by pressing ESC';
-    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-      return 'by clicking on a backdrop';
-    } else {
-      return  `with: ${reason}`;
-    }
+
+  public _registerUser(): void {
+    this.editableUserProfile.role = new Role();
+    this.subscriptions.push(this.userProfileService.saveUserProfile(this.editableUserProfile).subscribe(() => {
+      //this._updateUsers();
+      this.refreshUsers();
+    }));
+  }
+
+  public _updateUsers(): void {
+    this.loadUsers();
+  }
+
+  public _deleteUser(id: string): void {
+    this.subscriptions.push(this.userProfileService.deleteUserProfile(id).subscribe(() => {
+      this._updateUsers();
+    }));
+  }
+
+  private refreshUsers(): void {
+    this.editableUserProfile = new UserProfile();
+    this.editableUserProfile.role = new Role();
+  }
+
+  private loadUsers(): void {
+    this.subscriptions.push(this.userProfileService.getUserProfiles().subscribe(users => {
+      this.users = users as UserProfile[];
+    }));
+  }
+
+  private isExists(email: string): void {
+    this.subscriptions.push(this.userProfileService.getUserProfileByEmail(email).subscribe(  isExist => {
+      this.existingEmail = true;
+      if (!isExist) this.existingEmail = false;
+    }));
+  }
+
+  ngOnDestroy(): void {
+    this.subscriptions.forEach(subscription => subscription.unsubscribe());
   }
 }

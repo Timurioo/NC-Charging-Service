@@ -6,6 +6,8 @@ import { WalletPageComponent } from './components/wallet-page/wallet-page.compon
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { RouterModule } from '@angular/router';
+import {FormsModule} from "@angular/forms";
+import {UserProfileService} from "../../services/user-profile/user-profile.service";
 
 
 @NgModule({
@@ -14,11 +16,13 @@ import { RouterModule } from '@angular/router';
     RegisterComponent, UserProfileComponent],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   exports: [
     UserProfileLogoComponent, UserProfileComponent, WalletPageComponent,
     LoginComponent, RegisterComponent
-  ]
+    ],
+  providers: [UserProfileService]
 })
 export class AuthModule { }

@@ -5,7 +5,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "content", schema = "charging_service")
 public class ContentEntity {
-    private int id;
+    private Long id;
     private String itemName;
     private String pictureUrl;
     private String description;
@@ -13,23 +13,17 @@ public class ContentEntity {
     private UserProfileEntity userProfileId;
     private SubscriptionEntity subscriptionId;
 
-    public ContentEntity(String itemName, String pictureUrl, String description, Integer cost) {
-        this.itemName = itemName;
-        this.pictureUrl = pictureUrl;
-        this.description = description;
-        this.cost = cost;
-    }
-
     public ContentEntity() {
     }
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -89,18 +83,8 @@ public class ContentEntity {
         return true;
     }
 
-    @Override
-    public int hashCode() {
-        int result = id;
-        result = 31 * result + (itemName != null ? itemName.hashCode() : 0);
-        result = 31 * result + (pictureUrl != null ? pictureUrl.hashCode() : 0);
-        result = 31 * result + (description != null ? description.hashCode() : 0);
-        result = 31 * result + (cost != null ? cost.hashCode() : 0);
-        return result;
-    }
-
     @ManyToOne
-    @JoinColumn(name = "user_profile_id", referencedColumnName = "id", nullable = true)
+    @JoinColumn(name = "user_profile_id", referencedColumnName = "id")
     public UserProfileEntity getUserProfileId() {
         return userProfileId;
     }
@@ -110,7 +94,7 @@ public class ContentEntity {
     }
 
     @ManyToOne
-    @JoinColumn(name = "subscription_id", referencedColumnName = "id", nullable = true)
+    @JoinColumn(name = "subscription_id", referencedColumnName = "id")
     public SubscriptionEntity getSubscriptionId() {
         return subscriptionId;
     }

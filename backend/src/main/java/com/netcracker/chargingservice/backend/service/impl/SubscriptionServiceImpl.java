@@ -30,7 +30,7 @@ public class SubscriptionServiceImpl implements SubscriptionService {
     }
 
     @Override
-    public void delete(Integer id) {
+    public void delete(Long id) {
         subscriptionRepository.deleteById(id);
     }
 }

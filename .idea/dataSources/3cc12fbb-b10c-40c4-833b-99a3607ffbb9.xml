@@ -1281,58 +1281,43 @@
     </column>
     <column id="313" parent="281" name="password">
       <Position>3</Position>
-      <DataType>varchar(45)|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="314" parent="281" name="login">
+    <column id="314" parent="281" name="is_blocked">
       <Position>4</Position>
-      <DataType>varchar(45)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="315" parent="281" name="is_blocked">
-      <Position>5</Position>
       <DataType>tinyint(4)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="316" parent="281" name="first_name">
+    <column id="315" parent="281" name="first_name">
+      <Position>5</Position>
+      <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="316" parent="281" name="last_name">
       <Position>6</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="317" parent="281" name="last_name">
+    <column id="317" parent="281" name="roles_id">
       <Position>7</Position>
-      <DataType>varchar(45)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="318" parent="281" name="roles_id">
-      <Position>8</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="319" parent="281" name="LOGIN_UNIQUE">
-      <ColNames>login</ColNames>
-      <Unique>1</Unique>
-      <Type>btree</Type>
-    </index>
-    <index id="320" parent="281" name="fk_user-profile_roles1_idx">
+    <index id="318" parent="281" name="fk_user-profile_roles1_idx">
       <ColNames>roles_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="321" parent="281" name="PRIMARY">
+    <key id="319" parent="281" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="322" parent="281" name="LOGIN_UNIQUE">
-      <ColNames>login</ColNames>
-      <UnderlyingIndexName>LOGIN_UNIQUE</UnderlyingIndexName>
-    </key>
-    <foreign-key id="323" parent="281" name="fk_user-profile_roles1">
+    <foreign-key id="320" parent="281" name="fk_user-profile_roles1">
       <ColNames>roles_id</ColNames>
       <RefSchemaName>charging_service</RefSchemaName>
       <RefTableName>roles</RefTableName>

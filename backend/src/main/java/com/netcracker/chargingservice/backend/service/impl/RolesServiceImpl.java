@@ -29,7 +29,7 @@ public class RolesServiceImpl implements RolesService {
     }
 
     @Override
-    public void delete(Integer id) {
+    public void delete(Long id) {
         rolesRepository.deleteById(id);
     }
 }

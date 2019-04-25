@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 import java.util.Date;
 
 @Repository
-public interface SubscriptionRepository extends CrudRepository<SubscriptionEntity, Integer> {
+public interface SubscriptionRepository extends CrudRepository<SubscriptionEntity, Long> {
     SubscriptionEntity findByDate(Date date);
 }

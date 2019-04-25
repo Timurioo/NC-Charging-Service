@@ -5,7 +5,8 @@ import javax.persistence.*;
 @Entity
 @Table(name = "billing_account", schema = "charging_service")
 public class BillingAccountEntity {
-    private int id;
+
+    private Long id;
     private int funds;
     private Byte isActive;
     private UserProfileEntity userProfileId;
@@ -18,12 +19,13 @@ public class BillingAccountEntity {
     public BillingAccountEntity() {}
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -59,14 +61,6 @@ public class BillingAccountEntity {
         if (isActive != null ? !isActive.equals(that.isActive) : that.isActive != null) return false;
 
         return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id;
-        result = 31 * result + funds;
-        result = 31 * result + (isActive != null ? isActive.hashCode() : 0);
-        return result;
     }
 
     @ManyToOne

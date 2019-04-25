@@ -8,5 +8,5 @@ public interface RolesService {
     List<RoleEntity> findAll();
     RoleEntity findByName(String name);
     RoleEntity save(RoleEntity roles);
-    void delete(Integer id);
+    void delete(Long id);
 }

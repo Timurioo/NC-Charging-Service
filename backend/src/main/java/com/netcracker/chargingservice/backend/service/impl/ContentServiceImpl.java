@@ -25,12 +25,12 @@ public class ContentServiceImpl implements ContentService {
     }
 
     @Override
-    public ContentEntity save(ContentEntity content) {
+    public ContentEntity saveContent(ContentEntity content) {
         return contentRepository.save(content);
     }
 
     @Override
-    public void deleteContent(Integer id) {
+    public void deleteContent(Long id) {
         contentRepository.deleteById(id);
     }
 }

@@ -1,26 +1,85 @@
-<div class="container mt-lg-10">
+<div class="container mt-lg-5">
+  <div class="row">
+    <div class="col text-md-left">
+      <button type="button" class="btn btn-dark" (click)="_updateContent()">Update</button>
+    </div>
+    <div class="col text-md-right">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+              (click)="_openModal(template)">Create new product</button>
+    </div>
+  </div>
   <div class="row">
     <div class="col">
       <table class="table table-striped">
         <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Picture</th>
-          <th scope="col">Item name</th>
-          <th scope="col">Description</th>
-          <th scope="col">Cost</th>
-        </tr>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Picture</th>
+            <th scope="col">Item name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Cost</th>
+          </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let content of contents">
-          <td scope="row">{{content.id}}.</td>
-          <td><img alt="{{content.itemName}}'s logo" [src]="content.pictureUrl" width="100"></td>
-          <td>{{content.itemName}}</td>
-          <td>{{content.description}}</td>
-          <td>{{content.cost}} $ per year</td>
-        </tr>
+          <tr *ngFor="let content of contents">
+            <td scope="row">{{content.id}}.</td>
+            <td><img alt="{{content.itemName}}'s logo" [src]="content.pictureUrl" width="100"></td>
+            <td>{{content.itemName}}</td>
+            <td>{{content.description}}</td>
+            <td>{{content.cost}} $ per year</td>
+          </tr>
         </tbody>
       </table>
     </div>
   </div>
 </div>
+
+<!-- Modal -->
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">{{editMode ? "Edit": "Create"}}  New Product</h4>
+    <button type="button" class="close pull-right"
+            aria-label="Close" (click)="_closeModal()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="form-group">
+      <label>Item Name</label>
+      <input class="form-control" name="itemName" [(ngModel)]="editableContent.itemName" #itemName="ngModel" required/>
+      <div [hidden]="itemName.valid || itemName.untouched" class="alert alert-danger">
+        Please provide product name.
+      </div>
+    </div>
+    <div class="form-group">
+      <label>picture URL</label>
+      <input class="form-control" name="pictureUrl" [(ngModel)]="editableContent.pictureUrl" #pictureUrl="ngModel"
+             required pattern="(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png|svg)"/>
+      <div [hidden]="pictureUrl.valid || pictureUrl.untouched" class="alert alert-danger">
+        Picture URL is incorrect. Try again.
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Description</label>
+      <input class="form-control" name="description" [(ngModel)]="editableContent.description" #description="ngModel" required/>
+      <div [hidden]="description.valid || description.untouched" class="alert alert-danger">
+        Please set item's description.
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Cost</label>
+      <input class="form-control" name="cost" [(ngModel)]="editableContent.cost" #cost="ngModel" required/>
+      <div [hidden]="cost.valid || cost.untouched" class="alert alert-danger">
+        Please set price
+      </div>
+    </div>
+
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" (click)="_addContent()"
+            [disabled]="itemName.invalid || pictureUrl.invalid || description.invalid || cost.invalid">{{editMode ? "Save": "Create"}}
+    </button>
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="_closeModal()">Close</button>
+
+  </div>
+</ng-template>

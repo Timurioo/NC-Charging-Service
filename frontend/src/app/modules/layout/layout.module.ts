@@ -6,12 +6,16 @@ import { AuthModule } from '../auth/auth.module';
 import { HomepageModule } from '../homepage/homepage.module';
 import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from './components/404/not-found.component';
+import { SignInBtnComponent } from './components/navbar/sign-in-btn/sign-in-btn.component';
+import { SignUpBtnComponent } from './components/navbar/sign-up-btn/sign-up-btn.component';
 
 @NgModule({
   declarations: [
     SearchbarComponent,
     NavbarComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    SignInBtnComponent,
+    SignUpBtnComponent
   ],
   imports: [
     CommonModule,

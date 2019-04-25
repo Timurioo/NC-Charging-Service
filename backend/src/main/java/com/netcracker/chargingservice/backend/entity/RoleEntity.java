@@ -5,7 +5,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "roles", schema = "charging_service")
 public class RoleEntity {
-    private int id;
+    private Long id;
     private String name;
 
     public RoleEntity(String name) {
@@ -15,12 +15,13 @@ public class RoleEntity {
     public RoleEntity() {}
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -45,12 +46,5 @@ public class RoleEntity {
         if (name != null ? !name.equals(that.name) : that.name != null) return false;
 
         return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id;
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        return result;
     }
 }

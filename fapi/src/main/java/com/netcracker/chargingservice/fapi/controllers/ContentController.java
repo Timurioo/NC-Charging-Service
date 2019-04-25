@@ -4,14 +4,10 @@ import com.netcracker.chargingservice.fapi.models.Content;
 import com.netcracker.chargingservice.fapi.service.ContentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/api/content")
 public class ContentController {
@@ -21,4 +17,11 @@ public class ContentController {
 
     @GetMapping(path="/all")
     public ResponseEntity<List<Content>> getAllProducts() { return ResponseEntity.ok(contentService.findAll()); }
+
+    @PostMapping(path="", produces = "application/json")
+    public ResponseEntity<Content> saveProduct(@RequestBody Content content) {
+        if (content != null)
+            return ResponseEntity.ok(contentService.saveContent(content));
+        return null;
+    }
 }

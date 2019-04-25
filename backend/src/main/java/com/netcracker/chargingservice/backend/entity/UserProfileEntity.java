@@ -5,34 +5,24 @@ import javax.persistence.*;
 @Entity
 @Table(name = "user_profile", schema = "charging_service")
 public class UserProfileEntity {
-    private int id;
+    private Long id;
     private String email;
-    private String pass;
-    private String login;
+    private String password;
     private Byte isBlocked;
     private String firstName;
     private String lastName;
-    private RoleEntity rolesId;
-
-    public UserProfileEntity(String email, String pass, String login,
-                             Byte isBlocked, String firstName, String lastName) {
-        this.email = email;
-        this.pass = pass;
-        this.login = login;
-        this.isBlocked = isBlocked;
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
+    private RoleEntity role;
 
     public UserProfileEntity() {}
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -48,22 +38,12 @@ public class UserProfileEntity {
 
     @Basic
     @Column(name = "password")
-    public String getPass() {
-        return pass;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPass(String pass) {
-        this.pass = pass;
-    }
-
-    @Basic
-    @Column(name = "login")
-    public String getLogin() {
-        return login;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Basic
@@ -105,8 +85,7 @@ public class UserProfileEntity {
 
         if (id != that.id) return false;
         if (email != null ? !email.equals(that.email) : that.email != null) return false;
-        if (pass != null ? !pass.equals(that.pass) : that.pass != null) return false;
-        if (login != null ? !login.equals(that.login) : that.login != null) return false;
+        if (password != null ? !password.equals(that.password) : that.password != null) return false;
         if (isBlocked != null ? !isBlocked.equals(that.isBlocked) : that.isBlocked != null) return false;
         if (firstName != null ? !firstName.equals(that.firstName) : that.firstName != null) return false;
         if (lastName != null ? !lastName.equals(that.lastName) : that.lastName != null) return false;
@@ -114,25 +93,25 @@ public class UserProfileEntity {
         return true;
     }
 
-    @Override
-    public int hashCode() {
-        int result = id;
-        result = 31 * result + (email != null ? email.hashCode() : 0);
-        result = 31 * result + (pass != null ? pass.hashCode() : 0);
-        result = 31 * result + (login != null ? login.hashCode() : 0);
-        result = 31 * result + (isBlocked != null ? isBlocked.hashCode() : 0);
-        result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
-        result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
-        return result;
-    }
-
     @ManyToOne
     @JoinColumn(name = "roles_id", referencedColumnName = "id", nullable = false)
-    public RoleEntity getRolesId() {
-        return rolesId;
+    public RoleEntity getRole() {
+        return role;
     }
 
-    public void setRolesId(RoleEntity rolesId) {
-        this.rolesId = rolesId;
+    public void setRole(RoleEntity role) {
+        this.role = role;
     }
+
+    /*public UserProfileEntity(String email, String password,
+                             String firstName, String lastName, RoleEntity role) {
+        this.email = email;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.rolesId = role;
+    }*/
+
 }
+
+

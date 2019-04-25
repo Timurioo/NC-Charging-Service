@@ -3,12 +3,13 @@ package com.netcracker.chargingservice.backend.service;
 import com.netcracker.chargingservice.backend.entity.UserProfileEntity;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface UserProfileService {
 
     List<UserProfileEntity> findAll();
-    UserProfileEntity findByLogin(String login);
+    Optional<UserProfileEntity> findByEmail(String email);
     UserProfileEntity save(UserProfileEntity user);
-    void delete(Integer id);
+    void delete(Long id);
 }
 

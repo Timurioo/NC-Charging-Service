@@ -31,9 +31,9 @@ public class ContentServiceImpl implements ContentService {
     }
 
     @Override
-    public Content save(Content content) {
+    public Content saveContent(Content content) {
         RestTemplate restTemplate = new RestTemplate();
-        return restTemplate.postForEntity(backendServerUrl + "/api/content/", content, Content.class).getBody();
+        return restTemplate.postForEntity(backendServerUrl + "/api/content", content, Content.class).getBody();
     }
 
     @Override

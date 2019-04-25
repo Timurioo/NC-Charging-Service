@@ -19,7 +19,7 @@ public class BillingAccountServiceImpl implements BillingAccountService {
     }
 
     @Override
-    public Optional<BillingAccountEntity> getBillingAccountById(Integer id) {
+    public Optional<BillingAccountEntity> getBillingAccountById(Long id) {
         return billingAccountRepository.findById(id);
     }
 
@@ -29,7 +29,7 @@ public class BillingAccountServiceImpl implements BillingAccountService {
     }
 
     @Override
-    public void deleteBillingAccount(Integer id) {
+    public void deleteBillingAccount(Long id) {
         billingAccountRepository.deleteById(id);
     }
 }

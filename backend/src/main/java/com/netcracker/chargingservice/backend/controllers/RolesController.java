@@ -20,10 +20,4 @@ public class RolesController {
         return rolesService.findAll();
     }
 
-    @PostMapping(path="/add")
-    public @ResponseBody String addNewRole(@RequestParam String name) {
-        RoleEntity role = new RoleEntity(name);
-        rolesService.save(role);
-        return "Saved";
-    }
 }

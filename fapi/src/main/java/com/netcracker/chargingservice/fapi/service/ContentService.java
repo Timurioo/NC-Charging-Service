@@ -7,6 +7,6 @@ import java.util.List;
 public interface ContentService {
     List<Content> findAll();
     Content findByItemName(String itemName);
-    Content save(Content content);
+    Content saveContent(Content content);
     void deleteContent(Integer id);
 }

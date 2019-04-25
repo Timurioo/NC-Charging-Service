@@ -4,6 +4,7 @@ import com.netcracker.chargingservice.fapi.models.UserProfile;
 import com.netcracker.chargingservice.fapi.service.UserProfileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -24,10 +25,9 @@ public class UserProfileServiceImpl implements UserDetailsService, UserProfileSe
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Override
-    public UserProfile findByLogin(String login) {
+    public UserProfile findByEmail(String email) {
         RestTemplate restTemplate = new RestTemplate();
-        UserProfile user = restTemplate.getForObject(backendServerUrl + "/api/user/login/" + login, UserProfile.class);
-        return user;
+        return restTemplate.getForObject(backendServerUrl + "/api/user/email/" + email, UserProfile.class);
     }
 
     @Override
@@ -41,16 +41,16 @@ public class UserProfileServiceImpl implements UserDetailsService, UserProfileSe
     public UserProfile save(UserProfile user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         RestTemplate restTemplate = new RestTemplate();
-        return restTemplate.postForEntity(backendServerUrl + "/api/user", user, UserProfile.class).getBody();
+        return restTemplate.postForEntity(backendServerUrl + "/api/user/signup", user, UserProfile.class).getBody();
     }
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        UserProfile userProfile = findByLogin(username);
+    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+        UserProfile userProfile = findByEmail(email);
         if (userProfile == null) {
-            throw new UsernameNotFoundException("Invalid username or password.");
+            throw new UsernameNotFoundException("Invalid email or password.");
         }
-        return new org.springframework.security.core.userdetails.User(userProfile.getLogin(),
+        return new org.springframework.security.core.userdetails.User(userProfile.getEmail(),
                 userProfile.getPassword(), getAuthority(userProfile));
     }
 

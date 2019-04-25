@@ -1,11 +1,11 @@
-    <ng-template #content let-modal>
+<!--    <ng-template #content let-modal>
         <div class="modal-header">
           <h4 class="modal-title" id="modal-basic-title">Register</h4>
           <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body">-->
             <form class="text-center border border-light p-5">
 
                 <p class="h4 mb-4">Sign up</p>
@@ -13,33 +13,36 @@
                 <div class="form-row mb-4">
                   <div class="col">
                     <!-- First name -->
-                    <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name">
+                    <input type="text" class="form-control" name="firstName" [(ngModel)]="editableUserProfile.firstName" placeholder="First name" #firstName="ngModel" required>
+                    <div [hidden]="firstName.valid || firstName.untouched" class="alert alert-danger">
+                      Please name yourself.
+                    </div>
                   </div>
                   <div class="col">
                     <!-- Last name -->
-                    <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name">
+                    <input type="text" class="form-control" name="lastName" [(ngModel)]="editableUserProfile.lastName" placeholder="Last name" #lastName="ngModel" required>
+                    <div [hidden]="lastName.valid || lastName.untouched" class="alert alert-danger">
+                      Please name yourself.
+                    </div>
                   </div>
                 </div>
-          
+
                 <!-- E-mail -->
-                <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
-          
+                <input type="email" class="form-control mb-4" name="email" [(ngModel)]="editableUserProfile.email" (focusout)="isExists(email.value)" (change)="existingEmail = false" placeholder="E-mail" #email="ngModel">
+                <div [hidden]="!existingEmail" class="alert alert-danger">Email already exists</div>
+
                 <!-- Password -->
-                <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
-                <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+                <input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="editableUserProfile.password" #password="ngModel" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+                <small class="form-text text-muted mb-4">
                   At least 8 characters and 1 digit
                 </small>
-          
-                <!-- Phone number -->
-                <input type="text" id="defaultRegisterPhonePassword" class="form-control" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock">
-                <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
-                  Optional - for two step authentication
-                </small>     
+                <button type="button" class="btn btn-outline-primary" (click)="_registerUser()"
+            [disabled]="firstName.invalid || lastName.invalid || password.invalid || existingEmail">Create</button>
               </form>
-        </div>
+ <!--       </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Sign Up</button>
         </div>
       </ng-template>
       
-      <button class="btn btn-outline-primary" (click)="open(content)">Sign Up</button>
+      <button class="btn btn-outline-primary" (click)="open(content)">Sign Up</button>-->

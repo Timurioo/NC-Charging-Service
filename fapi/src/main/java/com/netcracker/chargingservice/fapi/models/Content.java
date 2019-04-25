@@ -1,15 +1,21 @@
 package com.netcracker.chargingservice.fapi.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import java.util.Objects;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Content {
-    private int id;
+
+    private Long id;
     private String itemName;
     private String pictureUrl;
     private String description;
     private Integer cost;
-    private int userProfileId;
-    private int subscriptionId;
+    private Long userProfileId;
+    private Long subscriptionId;
 
-    public Content(String itemName, String pictureUrl, String description, Integer cost, int userProfileId, int subscriptionId) {
+    public Content(String itemName, String pictureUrl, String description, Integer cost, Long userProfileId, Long subscriptionId) {
         this.itemName = itemName;
         this.pictureUrl = pictureUrl;
         this.description = description;
@@ -21,11 +27,11 @@ public class Content {
     public Content() {
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -61,19 +67,19 @@ public class Content {
         this.cost = cost;
     }
 
-    public int getUserProfileId() {
+    public Long getUserProfileId() {
         return userProfileId;
     }
 
-    public void setUserProfileId(int userProfileId) {
+    public void setUserProfileId(Long userProfileId) {
         this.userProfileId = userProfileId;
     }
 
-    public int getSubscriptionId() {
+    public Long getSubscriptionId() {
         return subscriptionId;
     }
 
-    public void setSubscriptionId(int subscriptionId) {
+    public void setSubscriptionId(Long subscriptionId) {
         this.subscriptionId = subscriptionId;
     }
 
@@ -95,11 +101,6 @@ public class Content {
 
     @Override
     public int hashCode() {
-        int result = id;
-        result = 31 * result + (itemName != null ? itemName.hashCode() : 0);
-        result = 31 * result + (pictureUrl != null ? pictureUrl.hashCode() : 0);
-        result = 31 * result + (description != null ? description.hashCode() : 0);
-        result = 31 * result + (cost != null ? cost.hashCode() : 0);
-        return result;
+        return Objects.hash(id, itemName, pictureUrl, description, cost);
     }
 }

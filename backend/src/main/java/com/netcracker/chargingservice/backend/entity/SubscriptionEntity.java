@@ -6,7 +6,7 @@ import java.sql.Date;
 @Entity
 @Table(name = "subscription", schema = "charging_service")
 public class SubscriptionEntity {
-    private int id;
+    private Long id;
     private String product;
     private Date date;
     private BillingAccountEntity billingAccountId;
@@ -20,12 +20,13 @@ public class SubscriptionEntity {
     }
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -61,14 +62,6 @@ public class SubscriptionEntity {
         if (date != null ? !date.equals(that.date) : that.date != null) return false;
 
         return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id;
-        result = 31 * result + (product != null ? product.hashCode() : 0);
-        result = 31 * result + (date != null ? date.hashCode() : 0);
-        return result;
     }
 
     @ManyToOne

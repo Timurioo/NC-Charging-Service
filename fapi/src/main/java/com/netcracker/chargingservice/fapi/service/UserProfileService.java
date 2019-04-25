@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface UserProfileService {
 
-    UserProfile findByLogin(String login);
+    UserProfile findByEmail(String email);
     List<UserProfile> findAll();
     UserProfile save(UserProfile user);
 }

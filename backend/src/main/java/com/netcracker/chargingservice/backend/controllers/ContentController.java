@@ -17,11 +17,8 @@ public class ContentController {
     @GetMapping(path="/all")
     public @ResponseBody List<ContentEntity> getAllProducts() { return contentService.findAll(); }
 
-    @PostMapping(path="/add")
-    public @ResponseBody String addNewProduct(@RequestParam String itemName, @RequestParam String pictureUrl, @RequestParam String description,
-                                              @RequestParam Integer cost) {
-        ContentEntity content = new ContentEntity(itemName, pictureUrl, description, cost);
-        contentService.save(content);
-        return "Saved";
+    @PostMapping("")
+    public @ResponseBody ContentEntity saveContent(@RequestBody ContentEntity content) {
+       return contentService.saveContent(content);
     }
 }
