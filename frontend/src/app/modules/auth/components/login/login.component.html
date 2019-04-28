@@ -6,24 +6,39 @@
     </button>
   </div>
   <div class="modal-body">-->
-          <form class="text-center border border-light p-5">
+<form class="text-center border border-light p-5">
 
-            <p class="h4 mb-4">Sign in</p>
+  <p class="h4 mb-4">Sign in</p>
 
-            <!-- Email -->
-            <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+  <div class="row">
+    <div class="col-lg-4 mx-auto">
+      <div class="input-group-lg">
+        <!-- Email -->
+        <input type="email" class="form-control mb-md-5" name="email" [(ngModel)]="loginUser.email"
+               placeholder="E-mail" #email="ngModel">
 
-            <!-- Password -->
-            <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
-            <!-- Register -->
-            <p>Not a member?
-              <a (click)="modal.dismiss()" routerLink="/register">Register</a>
-            </p>
-          </form>
- <!-- </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Sign In</button>
+        <!-- Password -->
+        <input type="password" class="form-control mb-md-5" name="password"
+               [(ngModel)]="loginUser.password" placeholder="Password" #password="ngModel">
+      </div>
+      <div *ngIf="incorrect">
+        <div class="alert alert-danger">
+          Incorrect username or password
+        </div>
+      </div>
+    </div>
   </div>
+
+  <button type="button" class="btn btn-outline-dark" (click)="_login()">Sign In</button>
+  <!-- Register -->
+  <p>Not a member?
+    <a routerLink="/register">Register</a>
+  </p>
+</form>
+<!-- </div>
+ <div class="modal-footer">
+   <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Sign In</button>
+ </div>
 </ng-template>
 
 <button class="btn btn-outline-primary" (click)="open(content)">Sign In</button>-->

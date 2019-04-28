@@ -8,6 +8,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { RouterModule } from '@angular/router';
 import {FormsModule} from "@angular/forms";
 import {UserProfileService} from "../../services/user-profile/user-profile.service";
+import {AuthService} from "../../services/auth/auth.service";
+import {TokenStorage} from "../../services/auth/token.storage";
 
 
 @NgModule({
@@ -23,6 +25,6 @@ import {UserProfileService} from "../../services/user-profile/user-profile.servi
     UserProfileLogoComponent, UserProfileComponent, WalletPageComponent,
     LoginComponent, RegisterComponent
     ],
-  providers: [UserProfileService]
+  providers: [UserProfileService, AuthService, TokenStorage]
 })
 export class AuthModule { }
