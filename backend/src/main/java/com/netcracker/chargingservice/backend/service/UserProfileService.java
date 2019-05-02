@@ -11,5 +11,6 @@ public interface UserProfileService {
     Optional<UserProfileEntity> findByEmail(String email);
     UserProfileEntity save(UserProfileEntity user);
     void delete(Long id);
+    Optional<UserProfileEntity> findById(long id);
 }
 

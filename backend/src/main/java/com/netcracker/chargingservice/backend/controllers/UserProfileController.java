@@ -21,6 +21,12 @@ public class UserProfileController {
         return userProfileService.save(userProfileEntity);
     }
 
+    @GetMapping(path="id/{id}")
+    public ResponseEntity<UserProfileEntity> getUserById(@PathVariable(name="id") long id) {
+       Optional<UserProfileEntity> user = userProfileService.findById(id);
+       return user.map(ResponseEntity::ok).orElse(null);
+    }
+
     @GetMapping(path="/all")
     public @ResponseBody List<UserProfileEntity> getAll() {
         return userProfileService.findAll();

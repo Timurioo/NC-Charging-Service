@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { NgHttpLoaderModule } from 'ng-http-loader';
 import { LayoutModule } from './modules/layout/layout.module';
 import { AuthModule } from './modules/auth/auth.module';
@@ -9,13 +9,16 @@ import { HomepageModule } from './modules/homepage/homepage.module';
 import { RouterModule, Routes } from '@angular/router';
 import { ModalModule } from "ngx-bootstrap/modal";
 import { FormsModule} from "@angular/forms";
+import {PagesModule} from "./modules/pages/pages.module";
 
 import { ContentTableComponent } from './modules/homepage/components/content-table/content-table.component';
 import { LandingComponent } from './modules/homepage/components/landing/landing.component';
 import { UserProfileComponent } from './modules/auth/components/user-profile/user-profile.component';
 import { NotFoundComponent } from './modules/layout/components/404/not-found.component';
-import {RegisterComponent} from "./modules/auth/components/register/register.component";
-import {LoginComponent} from "./modules/auth/components/login/login.component";
+import { RegisterComponent } from "./modules/auth/components/register/register.component";
+import { LoginComponent } from "./modules/auth/components/login/login.component";
+import {Interceptor} from "./app.interceptor";
+
 
 const appRoutes: Routes = [
   {path: "", component: LandingComponent},
@@ -40,9 +43,14 @@ const appRoutes: Routes = [
     AuthModule,
     HomepageModule,
     ModalModule.forRoot(),
-    FormsModule
+    FormsModule,
+    PagesModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: Interceptor,
+    multi: true,
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

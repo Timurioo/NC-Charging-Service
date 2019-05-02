@@ -3,6 +3,7 @@ import { Content } from '../../../../models/content';
 import {BsModalRef, BsModalService} from "ngx-bootstrap";
 import { ContentService } from '../../../../services/content/content.service';
 import {Subscription} from "rxjs";
+import {AuthService} from "../../../../services/auth/auth.service";
 
 @Component({
   selector: 'app-content-table',
@@ -21,35 +22,11 @@ export class ContentTableComponent implements OnInit {
   private subscriptions: Subscription[] = [];
 
   constructor(private contentService: ContentService,
-              private modalService: BsModalService) { }
+              private modalService: BsModalService,
+              private authService: AuthService) { }
 
   ngOnInit() {
     this.loadProducts();
-  }
-
-  public _closeModal(): void {
-    this.modalRef.hide();
-  }
-
-  public _openModal(template: TemplateRef<any>, content: Content): void {
-
-    if (content) {
-      this.editMode = true;
-      this.editableContent = Content.cloneBase(content);
-    } else {
-      this.refreshContent();
-      this.editMode = false;
-    }
-
-    this.modalRef = this.modalService.show(template);
-  }
-
-  public _addContent(): void {
-    this.subscriptions.push(this.contentService.saveProduct(this.editableContent).subscribe(() => {
-      this._updateContent();
-      this.refreshContent();
-      this._closeModal();
-    }));
   }
 
   public _updateContent(): void {

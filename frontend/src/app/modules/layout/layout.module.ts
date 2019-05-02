@@ -6,16 +6,18 @@ import { AuthModule } from '../auth/auth.module';
 import { HomepageModule } from '../homepage/homepage.module';
 import { RouterModule } from '@angular/router';
 import { NotFoundComponent } from './components/404/not-found.component';
-import { SignInBtnComponent } from './components/navbar/sign-in-btn/sign-in-btn.component';
-import { SignUpBtnComponent } from './components/navbar/sign-up-btn/sign-up-btn.component';
+import { SignInBtnComponent } from '../auth/components/sign-in-btn/sign-in-btn.component';
+import { SignUpBtnComponent } from '../auth/components/sign-up-btn/sign-up-btn.component';
+import {LoginComponent} from "../auth/components/login/login.component";
+import {UserProfileStorage} from "../../services/user-profile/user-profile.storage";
+import {AuthService} from "../../services/auth/auth.service";
 
 @NgModule({
   declarations: [
     SearchbarComponent,
     NavbarComponent,
     NotFoundComponent,
-    SignInBtnComponent,
-    SignUpBtnComponent
+
   ],
   imports: [
     CommonModule,
@@ -27,6 +29,7 @@ import { SignUpBtnComponent } from './components/navbar/sign-up-btn/sign-up-btn.
     SearchbarComponent,
     NavbarComponent,
     NotFoundComponent
-  ]
+  ],
+  providers: [AuthService, UserProfileStorage, ]
 })
 export class LayoutModule { }

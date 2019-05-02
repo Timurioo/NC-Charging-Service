@@ -3,9 +3,13 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav container-fluid justify-content-end">
       <app-searchbar></app-searchbar>
+      <div *ngIf="!authService.user">
       <app-sign-in-btn></app-sign-in-btn>
       <app-sign-up-btn></app-sign-up-btn>
+      </div>
+      <div *ngIf="authService.user">
       <app-user-profile-logo></app-user-profile-logo>
+      </div>
     </div>
   </div>
 </nav>

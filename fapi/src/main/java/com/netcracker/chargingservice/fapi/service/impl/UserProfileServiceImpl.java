@@ -1,10 +1,11 @@
 package com.netcracker.chargingservice.fapi.service.impl;
 
-import com.netcracker.chargingservice.fapi.models.UserProfile;
+import com.netcracker.chargingservice.fapi.models.RegisterUser;
+import com.netcracker.chargingservice.fapi.security.SecurityJwtConstants;
+import com.netcracker.chargingservice.fapi.security.TokenProvider;
 import com.netcracker.chargingservice.fapi.service.UserProfileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -24,40 +25,60 @@ public class UserProfileServiceImpl implements UserDetailsService, UserProfileSe
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
+    @Autowired
+    private TokenProvider tokenProvider;
+
     @Override
-    public UserProfile findByEmail(String email) {
+    public RegisterUser findByEmail(String email) {
         RestTemplate restTemplate = new RestTemplate();
-        return restTemplate.getForObject(backendServerUrl + "/api/user/email/" + email, UserProfile.class);
+        return restTemplate.getForObject(backendServerUrl + "/api/user/email/" + email, RegisterUser.class);
     }
 
     @Override
-    public List<UserProfile> findAll() {
+    public RegisterUser findById(long id) {
         RestTemplate restTemplate = new RestTemplate();
-        UserProfile[] usersResponse = restTemplate.getForObject(backendServerUrl + "/api/user", UserProfile[].class);
+        return restTemplate.getForObject(backendServerUrl + "/api/user/id" + id, RegisterUser.class);
+    }
+
+    @Override
+    public List<RegisterUser> findAll() {
+        RestTemplate restTemplate = new RestTemplate();
+        RegisterUser[] usersResponse = restTemplate.getForObject(backendServerUrl + "/api/user", RegisterUser[].class);
         return usersResponse == null ? Collections.emptyList() : Arrays.asList(usersResponse);
     }
 
     @Override
-    public UserProfile save(UserProfile user) {
+    public RegisterUser save(RegisterUser user) {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         RestTemplate restTemplate = new RestTemplate();
-        return restTemplate.postForEntity(backendServerUrl + "/api/user/signup", user, UserProfile.class).getBody();
+        return restTemplate.postForEntity(backendServerUrl + "/api/user/signup", user, RegisterUser.class).getBody();
     }
 
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        UserProfile userProfile = findByEmail(email);
-        if (userProfile == null) {
+        RegisterUser registerUser = findByEmail(email);
+        if (registerUser == null) {
             throw new UsernameNotFoundException("Invalid email or password.");
         }
-        return new org.springframework.security.core.userdetails.User(userProfile.getEmail(),
-                userProfile.getPassword(), getAuthority(userProfile));
+        return new org.springframework.security.core.userdetails.User(registerUser.getEmail(),
+                registerUser.getPassword(), getAuthority(registerUser));
     }
 
-    private Set<SimpleGrantedAuthority> getAuthority(UserProfile userProfile) {
+    private Set<SimpleGrantedAuthority> getAuthority(RegisterUser registerUser) {
         Set<SimpleGrantedAuthority> authorities = new HashSet<>();
-        authorities.add(new SimpleGrantedAuthority("ROLE_" + userProfile.getRole()));
+        authorities.add(new SimpleGrantedAuthority("ROLE_" + registerUser.getRole()));
         return authorities;
     }
 
+    @Override
+    public String getUsername(String bearerToken) {
+        String email = null;
+        String authToken = bearerToken.replace(SecurityJwtConstants.TOKEN_PREFIX, "");
+        try {
+            email = tokenProvider.getUsernameFromToken(authToken);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return email;
+    }
 }

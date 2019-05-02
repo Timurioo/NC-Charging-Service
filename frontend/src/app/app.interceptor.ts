@@ -20,7 +20,6 @@ export class Interceptor implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     console.log("Interceptor works");
     let authReq = req;
-    console.log(this.token.getToken());
     if (this.token.getToken() != null) {
       authReq = req.clone({headers: req.headers.set(TOKEN_HEADER_KEY, 'Bearer ' + this.token.getToken())});
     }
@@ -35,7 +34,7 @@ export class Interceptor implements HttpInterceptor {
         console.error("Interceptor log error", err);
         if (err instanceof HttpErrorResponse) {
           if (err.status === 401) {
-            this.router.navigate(['login']);
+            this.router.navigate(['sign-in']);
           }
         }
       }

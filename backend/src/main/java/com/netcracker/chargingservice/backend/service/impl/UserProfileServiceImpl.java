@@ -26,6 +26,11 @@ public class UserProfileServiceImpl implements UserProfileService {
     }
 
     @Override
+    public Optional<UserProfileEntity> findById(long id) {
+        return userProfileRepository.findById(id);
+    }
+
+    @Override
     public UserProfileEntity save(UserProfileEntity user) {
         boolean userForComparison = userProfileRepository.findByEmail(user.getEmail()).isPresent();
         if (user.getId() != null || !userForComparison) {
