@@ -1,0 +1,39 @@
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+        (click)="_openModal(template)">Add wallet</button>
+
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">{{editMode ? "Edit": "Create"}}  New Wallet</h4>
+    <button type="button" class="close pull-right"
+            aria-label="Close" (click)="_closeModal()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="form-group">
+      <label>Wallet Number</label>
+      <input class="form-control" name="walletId" [(ngModel)]="editableWallet.walletId" #walletId="ngModel"
+             required pattern="^\d+$"/>
+      <div [hidden]="walletId.valid || walletId.untouched" class="alert alert-danger">
+        Please provide wallet No.
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Funds</label>
+      <input class="form-control" name="funds" [(ngModel)]="editableWallet.funds" #funds="ngModel"
+             required pattern="^\d+$"/>
+      <div [hidden]="funds.valid || funds.untouched" class="alert alert-danger">
+        Funds cannot be negative. Try again.
+      </div>
+    </div>
+
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" (click)="_addWallet()"
+            [disabled]="walletId?.invalid || funds?.invalid">{{editMode ? "Save": "Create"}}
+    </button>
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="_closeModal()">Close</button>
+
+  </div>
+</ng-template>
+

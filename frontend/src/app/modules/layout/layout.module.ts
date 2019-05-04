@@ -11,6 +11,7 @@ import { SignUpBtnComponent } from '../auth/components/sign-up-btn/sign-up-btn.c
 import {LoginComponent} from "../auth/components/login/login.component";
 import {UserProfileStorage} from "../../services/user-profile/user-profile.storage";
 import {AuthService} from "../../services/auth/auth.service";
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 
 @NgModule({
   declarations: [
@@ -23,12 +24,14 @@ import {AuthService} from "../../services/auth/auth.service";
     CommonModule,
     AuthModule,
     HomepageModule,
-    RouterModule
+    RouterModule,
+    NgbModule
   ],
   exports: [
     SearchbarComponent,
     NavbarComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    NgbModule
   ],
   providers: [AuthService, UserProfileStorage, ]
 })

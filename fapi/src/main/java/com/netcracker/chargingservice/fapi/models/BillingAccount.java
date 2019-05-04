@@ -1,27 +1,26 @@
-package com.netcracker.chargingservice.backend.entity;
+package com.netcracker.chargingservice.fapi.models;
 
-import javax.persistence.*;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-@Entity
-@Table(name = "billing_account", schema = "charging_service")
-public class BillingAccountEntity {
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class BillingAccount {
 
     private Long id;
     private Long walletId;
     private int funds;
     private Byte isActive;
-    private UserProfileEntity userProfile;
+    private UserProfile userProfile;
 
-    public BillingAccountEntity(int funds, Byte isActive) {
+    public BillingAccount(Long id, int funds, Long walletId, Byte isActive, UserProfile userProfile) {
+        this.id = id;
         this.funds = funds;
         this.isActive = isActive;
+        this.walletId = walletId;
+        this.userProfile = userProfile;
     }
 
-    public BillingAccountEntity() {}
+    public BillingAccount() {}
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
     public Long getId() {
         return id;
     }
@@ -30,8 +29,6 @@ public class BillingAccountEntity {
         this.id = id;
     }
 
-    @Basic
-    @Column(name = "wallet_id")
     public Long getWalletId() {
         return walletId;
     }
@@ -40,8 +37,6 @@ public class BillingAccountEntity {
         this.walletId = walletId;
     }
 
-    @Basic
-    @Column(name = "funds")
     public int getFunds() {
         return funds;
     }
@@ -50,8 +45,6 @@ public class BillingAccountEntity {
         this.funds = funds;
     }
 
-    @Basic
-    @Column(name = "is_active")
     public Byte getIsActive() {
         return isActive;
     }
@@ -65,7 +58,7 @@ public class BillingAccountEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        BillingAccountEntity that = (BillingAccountEntity) o;
+        BillingAccount that = (BillingAccount) o;
 
         if (id != that.id) return false;
         if (funds != that.funds) return false;
@@ -74,13 +67,12 @@ public class BillingAccountEntity {
         return true;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "user_profile_id", referencedColumnName = "id", nullable = false)
-    public UserProfileEntity getUserProfile() {
+
+    public UserProfile getUserProfile() {
         return userProfile;
     }
 
-    public void setUserProfile(UserProfileEntity userProfile) {
+    public void setUserProfile(UserProfile userProfile) {
         this.userProfile = userProfile;
     }
 }

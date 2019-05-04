@@ -1,7 +1,7 @@
 package com.netcracker.chargingservice.fapi.controllers;
 
 import com.netcracker.chargingservice.fapi.models.RegisterUser;
-import com.netcracker.chargingservice.fapi.models.RegisterUserConverterToUserProfile;
+import com.netcracker.chargingservice.fapi.converters.RegisterUserConverterToUserProfile;
 import com.netcracker.chargingservice.fapi.service.UserProfileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

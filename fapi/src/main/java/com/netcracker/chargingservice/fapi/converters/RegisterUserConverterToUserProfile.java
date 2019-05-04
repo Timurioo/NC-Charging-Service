@@ -1,5 +1,7 @@
-package com.netcracker.chargingservice.fapi.models;
+package com.netcracker.chargingservice.fapi.converters;
 
+import com.netcracker.chargingservice.fapi.models.RegisterUser;
+import com.netcracker.chargingservice.fapi.models.UserProfile;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Service;
 

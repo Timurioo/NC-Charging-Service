@@ -12,15 +12,15 @@ public class Content {
     private String pictureUrl;
     private String description;
     private Integer cost;
-    private Long userProfileId;
+    private UserProfile userProfile;
     private Long subscriptionId;
 
-    public Content(String itemName, String pictureUrl, String description, Integer cost, Long userProfileId, Long subscriptionId) {
+    public Content(String itemName, String pictureUrl, String description, Integer cost, UserProfile userProfile, Long subscriptionId) {
         this.itemName = itemName;
         this.pictureUrl = pictureUrl;
         this.description = description;
         this.cost = cost;
-        this.userProfileId = userProfileId;
+        this.userProfile = userProfile;
         this.subscriptionId = subscriptionId;
     }
 
@@ -67,12 +67,12 @@ public class Content {
         this.cost = cost;
     }
 
-    public Long getUserProfileId() {
-        return userProfileId;
+    public UserProfile getUserProfile() {
+        return userProfile;
     }
 
-    public void setUserProfileId(Long userProfileId) {
-        this.userProfileId = userProfileId;
+    public void setUserProfile(UserProfile userProfile) {
+        this.userProfile = userProfile;
     }
 
     public Long getSubscriptionId() {

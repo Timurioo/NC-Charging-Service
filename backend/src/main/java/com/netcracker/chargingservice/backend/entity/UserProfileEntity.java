@@ -5,6 +5,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "user_profile", schema = "charging_service")
 public class UserProfileEntity {
+
     private Long id;
     private String email;
     private String password;

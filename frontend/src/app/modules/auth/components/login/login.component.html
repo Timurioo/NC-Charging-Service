@@ -21,7 +21,7 @@
         <input type="password" class="form-control mb-md-5" name="password"
                [(ngModel)]="loginUser.password" placeholder="Password" #password="ngModel">
       </div>
-      <div *ngIf="incorrect">
+      <div *ngIf="authService.incorrect">
         <div class="alert alert-danger">
           Incorrect username or password
         </div>

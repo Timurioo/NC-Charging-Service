@@ -1,12 +1,12 @@
 package com.netcracker.chargingservice.fapi.service;
 
-import com.netcracker.chargingservice.fapi.models.BillingAccountViewModel;
+import com.netcracker.chargingservice.fapi.models.BillingAccount;
 
 import java.util.List;
 
 public interface BillingAccountDataService {
-    List<BillingAccountViewModel> getAll();
-    BillingAccountViewModel getBillingAccountById(Long id);
-    BillingAccountViewModel saveBillingAccount(BillingAccountViewModel account);
+    List<BillingAccount> getAll();
+    BillingAccount getBillingAccountById(Long id);
+    BillingAccount saveBillingAccount(BillingAccount account);
     void deleteBillingAccount(Long id);
 }

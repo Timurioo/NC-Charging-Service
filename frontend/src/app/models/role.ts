@@ -1,3 +1,5 @@
+import {AuthService} from "../services/auth/auth.service";
+
 export class Role {
   id : string;
   name : string;
@@ -10,8 +12,7 @@ export class Role {
   }
 
   constructor() {
-    this.id = '2';
-    this.name = 'user';
+      this.id = '2';
+      this.name = 'user';
   }
-
 }

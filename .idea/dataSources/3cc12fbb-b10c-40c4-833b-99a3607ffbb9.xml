@@ -1133,191 +1133,204 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="286" parent="277" name="fk_billing_account_user_profile1_idx">
+    <column id="286" parent="277" name="wallet_id">
+      <Position>5</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="287" parent="277" name="billing_account_wallet_id_uindex">
+      <ColNames>wallet_id</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <index id="288" parent="277" name="fk_billing_account_user_profile1_idx">
       <ColNames>user_profile_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="287" parent="277" name="PRIMARY">
+    <key id="289" parent="277" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="288" parent="277" name="fk_billing_account_user_profile1">
+    <key id="290" parent="277" name="billing_account_wallet_id_uindex">
+      <ColNames>wallet_id</ColNames>
+      <UnderlyingIndexName>billing_account_wallet_id_uindex</UnderlyingIndexName>
+    </key>
+    <foreign-key id="291" parent="277" name="fk_billing_account_user_profile1">
       <ColNames>user_profile_id</ColNames>
       <RefSchemaName>charging_service</RefSchemaName>
       <RefTableName>user_profile</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="289" parent="278" name="id">
+    <column id="292" parent="278" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="290" parent="278" name="item_name">
+    <column id="293" parent="278" name="item_name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="291" parent="278" name="picture_url">
+    <column id="294" parent="278" name="picture_url">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="292" parent="278" name="description">
+    <column id="295" parent="278" name="description">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="293" parent="278" name="cost">
+    <column id="296" parent="278" name="cost">
       <Position>5</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="294" parent="278" name="user_profile_id">
+    <column id="297" parent="278" name="user_profile_id">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="295" parent="278" name="subscription_id">
+    <column id="298" parent="278" name="subscription_id">
       <Position>7</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="296" parent="278" name="fk_content_user-profile1_idx">
+    <index id="299" parent="278" name="fk_content_user-profile1_idx">
       <ColNames>user_profile_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="297" parent="278" name="fk_content_subscription1_idx">
+    <index id="300" parent="278" name="fk_content_subscription1_idx">
       <ColNames>subscription_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="298" parent="278" name="PRIMARY">
+    <key id="301" parent="278" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="299" parent="278" name="fk_content_user-profile1">
+    <foreign-key id="302" parent="278" name="fk_content_user-profile1">
       <ColNames>user_profile_id</ColNames>
       <RefSchemaName>charging_service</RefSchemaName>
       <RefTableName>user_profile</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="300" parent="278" name="fk_content_subscription1">
+    <foreign-key id="303" parent="278" name="fk_content_subscription1">
       <ColNames>subscription_id</ColNames>
       <RefSchemaName>charging_service</RefSchemaName>
       <RefTableName>subscription</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="301" parent="279" name="id">
+    <column id="304" parent="279" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="302" parent="279" name="name">
+    <column id="305" parent="279" name="name">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="303" parent="279" name="PRIMARY">
+    <key id="306" parent="279" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="304" parent="280" name="id">
+    <column id="307" parent="280" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="305" parent="280" name="product">
+    <column id="308" parent="280" name="product">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="306" parent="280" name="purchase_date">
+    <column id="309" parent="280" name="purchase_date">
       <Position>3</Position>
       <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="307" parent="280" name="billing_account_id">
+    <column id="310" parent="280" name="billing_account_id">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="308" parent="280" name="fk_subscription_billing-account1_idx">
+    <index id="311" parent="280" name="fk_subscription_billing-account1_idx">
       <ColNames>billing_account_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="309" parent="280" name="PRIMARY">
+    <key id="312" parent="280" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="310" parent="280" name="fk_subscription_billing-account1">
+    <foreign-key id="313" parent="280" name="fk_subscription_billing-account1">
       <ColNames>billing_account_id</ColNames>
       <RefSchemaName>charging_service</RefSchemaName>
       <RefTableName>billing_account</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="311" parent="281" name="id">
+    <column id="314" parent="281" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="312" parent="281" name="email">
+    <column id="315" parent="281" name="email">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="313" parent="281" name="password">
+    <column id="316" parent="281" name="password">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="314" parent="281" name="is_blocked">
+    <column id="317" parent="281" name="is_blocked">
       <Position>4</Position>
       <DataType>tinyint(4)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="315" parent="281" name="first_name">
+    <column id="318" parent="281" name="first_name">
       <Position>5</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="316" parent="281" name="last_name">
+    <column id="319" parent="281" name="last_name">
       <Position>6</Position>
       <DataType>varchar(45)|0s</DataType>
-      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="317" parent="281" name="roles_id">
+    <column id="320" parent="281" name="roles_id">
       <Position>7</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="318" parent="281" name="fk_user-profile_roles1_idx">
+    <index id="321" parent="281" name="fk_user-profile_roles1_idx">
       <ColNames>roles_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="319" parent="281" name="PRIMARY">
+    <key id="322" parent="281" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="320" parent="281" name="fk_user-profile_roles1">
+    <foreign-key id="323" parent="281" name="fk_user-profile_roles1">
       <ColNames>roles_id</ColNames>
       <RefSchemaName>charging_service</RefSchemaName>
       <RefTableName>roles</RefTableName>

@@ -1,12 +1,12 @@
 <div class="container mt-lg-5">
-  <div class="row">
-    <div *ngIf="authService.user && authService.user.role.id == '3'">
-      <div class="col text-md-left m-1">
+    <div class="row" *ngIf="authService.user && authService.user.role.id == '3'">
+      <div class="col m-1">
         <button type="button" class="btn btn-dark" (click)="_updateContent()">Update</button>
       </div>
+      <div class="col text-md-right m-1">
       <app-add-product></app-add-product>
+      </div>
     </div>
-  </div>
   <div class="row">
     <div class="col">
       <table class="table table-striped">

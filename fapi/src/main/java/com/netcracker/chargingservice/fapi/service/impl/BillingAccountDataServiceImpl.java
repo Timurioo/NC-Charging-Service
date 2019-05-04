@@ -1,6 +1,6 @@
 package com.netcracker.chargingservice.fapi.service.impl;
 
-import com.netcracker.chargingservice.fapi.models.BillingAccountViewModel;
+import com.netcracker.chargingservice.fapi.models.BillingAccount;
 import com.netcracker.chargingservice.fapi.service.BillingAccountDataService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -17,26 +17,26 @@ public class BillingAccountDataServiceImpl implements BillingAccountDataService 
     private String backendServerUrl;
 
     @Override
-    public List<BillingAccountViewModel> getAll() {
+    public List<BillingAccount> getAll() {
         RestTemplate restTemplate = new RestTemplate();
-        BillingAccountViewModel[] billingAccountViewModelResponse = restTemplate.getForObject(backendServerUrl + "/api/billing-accounts/", BillingAccountViewModel[].class);
+        BillingAccount[] billingAccountViewModelResponse = restTemplate.getForObject(backendServerUrl + "/api/billing/", BillingAccount[].class);
         return billingAccountViewModelResponse == null ? Collections.emptyList() : Arrays.asList(billingAccountViewModelResponse);
     }
 
     @Override
-    public BillingAccountViewModel getBillingAccountById(Long id) {
+    public BillingAccount getBillingAccountById(Long id) {
         RestTemplate restTemplate = new RestTemplate();
-        return restTemplate.getForObject(backendServerUrl + "/api/billing-accounts/" + id, BillingAccountViewModel.class);
+        return restTemplate.getForObject(backendServerUrl + "/api/billing/id/" + id, BillingAccount.class);
     }
     @Override
-    public BillingAccountViewModel saveBillingAccount(BillingAccountViewModel account) {
+    public BillingAccount saveBillingAccount(BillingAccount account) {
         RestTemplate restTemplate = new RestTemplate();
-        return restTemplate.postForEntity(backendServerUrl + "/api/billing-accounts", account, BillingAccountViewModel.class).getBody();
+        return restTemplate.postForEntity(backendServerUrl + "/api/billing/new", account, BillingAccount.class).getBody();
     }
 
     @Override
     public void deleteBillingAccount(Long id) {
         RestTemplate restTemplate = new RestTemplate();
-        restTemplate.delete(backendServerUrl + "/api/billing-accounts/" + id);
+        restTemplate.delete(backendServerUrl + "/api/billing/" + id);
     }
 }

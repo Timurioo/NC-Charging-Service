@@ -8,6 +8,7 @@ import { ContentService } from 'src/app/services/content/content.service';
 import {FormsModule} from '@angular/forms';
 import {PagesModule} from "../pages/pages.module";
 import {AuthService} from "../../services/auth/auth.service";
+import {AddProductComponent} from "../pages/add-product/add-product.component";
 
 @NgModule({
   declarations: [CarouselComponent, ContentTableComponent, LandingComponent],
@@ -15,11 +16,12 @@ import {AuthService} from "../../services/auth/auth.service";
     NgbModule,
     CommonModule,
     FormsModule,
-    PagesModule
+    PagesModule,
+    NgbModule
   ],
   exports: [
-    CarouselComponent, ContentTableComponent, LandingComponent
+    CarouselComponent, ContentTableComponent, LandingComponent, NgbModule
   ],
-  providers: [ContentService, AuthService]
+  providers: [ContentService, AuthService, AddProductComponent]
 })
 export class HomepageModule { }

@@ -18,7 +18,12 @@ public class ContentController {
     public @ResponseBody List<ContentEntity> getAllProducts() { return contentService.findAll(); }
 
     @PostMapping("")
-    public @ResponseBody ContentEntity saveContent(@RequestBody ContentEntity content) {
+    public @ResponseBody ContentEntity saveProduct(@RequestBody ContentEntity content) {
        return contentService.saveContent(content);
+    }
+
+    @DeleteMapping(path = "/{id}")
+    public void deleteProduct(@PathVariable Long id) {
+        contentService.deleteContent(id);
     }
 }

@@ -3,19 +3,29 @@ package com.netcracker.chargingservice.fapi.models;
 public class UserProfile {
 
     private Long id;
+    private String email;
+    private Byte isBlocked;
     private String firstName;
     private String lastName;
-    private String email;
     private Role role;
 
     public UserProfile() {}
 
-    public UserProfile(Long id, String firstName, String lastName, String email, Role role) {
+    public UserProfile(Long id, String firstName, String lastName, String email, Role role, Byte isBlocked) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.role = role;
+        this.isBlocked = isBlocked;
+    }
+
+    public Byte getIsBlocked() {
+        return isBlocked;
+    }
+
+    public void setIsBlocked(Byte isBlocked) {
+        this.isBlocked = isBlocked;
     }
 
     public Long getId() {

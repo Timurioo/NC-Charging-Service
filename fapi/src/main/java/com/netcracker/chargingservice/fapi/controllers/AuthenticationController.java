@@ -1,5 +1,6 @@
 package com.netcracker.chargingservice.fapi.controllers;
 
+import com.netcracker.chargingservice.fapi.converters.RegisterUserConverterToUserProfile;
 import com.netcracker.chargingservice.fapi.models.*;
 import com.netcracker.chargingservice.fapi.security.TokenProvider;
 import com.netcracker.chargingservice.fapi.service.UserProfileService;

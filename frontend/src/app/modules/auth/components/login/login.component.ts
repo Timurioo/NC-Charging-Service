@@ -22,7 +22,6 @@ export class LoginComponent {
               private authService: AuthService,
               private token: TokenStorage,
               private userProfileStorage: UserProfileStorage) {
-    this.isLogged = false;
   }
 
 
@@ -35,7 +34,6 @@ export class LoginComponent {
 
   public loginUser: UserProfile = new UserProfile();
   public incorrect: boolean = false;
-  public isLogged: boolean;
   formGroup: FormGroup;
   public user: UserProfile;
 

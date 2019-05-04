@@ -10,8 +10,8 @@ public class ContentEntity {
     private String pictureUrl;
     private String description;
     private Integer cost;
-    private UserProfileEntity userProfileId;
-    private SubscriptionEntity subscriptionId;
+    private UserProfileEntity userProfile;
+    private SubscriptionEntity subscription;
 
     public ContentEntity() {
     }
@@ -85,21 +85,21 @@ public class ContentEntity {
 
     @ManyToOne
     @JoinColumn(name = "user_profile_id", referencedColumnName = "id")
-    public UserProfileEntity getUserProfileId() {
-        return userProfileId;
+    public UserProfileEntity getUserProfile() {
+        return userProfile;
     }
 
-    public void setUserProfileId(UserProfileEntity userProfileId) {
-        this.userProfileId = userProfileId;
+    public void setUserProfile(UserProfileEntity userProfile) {
+        this.userProfile = userProfile;
     }
 
     @ManyToOne
     @JoinColumn(name = "subscription_id", referencedColumnName = "id")
-    public SubscriptionEntity getSubscriptionId() {
-        return subscriptionId;
+    public SubscriptionEntity getSubscription() {
+        return subscription;
     }
 
-    public void setSubscriptionId(SubscriptionEntity subscriptionId) {
-        this.subscriptionId = subscriptionId;
+    public void setSubscription(SubscriptionEntity subscription) {
+        this.subscription = subscription;
     }
 }

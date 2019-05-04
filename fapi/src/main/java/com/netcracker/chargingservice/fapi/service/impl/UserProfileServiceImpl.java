@@ -66,7 +66,7 @@ public class UserProfileServiceImpl implements UserDetailsService, UserProfileSe
 
     private Set<SimpleGrantedAuthority> getAuthority(RegisterUser registerUser) {
         Set<SimpleGrantedAuthority> authorities = new HashSet<>();
-        authorities.add(new SimpleGrantedAuthority("ROLE_" + registerUser.getRole()));
+        authorities.add(new SimpleGrantedAuthority("ROLE_" + registerUser.getRole().getName().toUpperCase()));
         return authorities;
     }
 

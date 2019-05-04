@@ -22,6 +22,6 @@ public class ContentController {
     public ResponseEntity<Content> saveProduct(@RequestBody Content content) {
         if (content != null)
             return ResponseEntity.ok(contentService.saveContent(content));
-        return null;
+        return ResponseEntity.notFound().build();
     }
 }

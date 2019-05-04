@@ -9,7 +9,7 @@ public class SubscriptionEntity {
     private Long id;
     private String product;
     private Date date;
-    private BillingAccountEntity billingAccountId;
+    private BillingAccountEntity billingAccount;
 
     public SubscriptionEntity(String product, Date date) {
         this.product = product;
@@ -66,11 +66,11 @@ public class SubscriptionEntity {
 
     @ManyToOne
     @JoinColumn(name = "billing_account_id", referencedColumnName = "id", nullable = false)
-    public BillingAccountEntity getBillingAccountId() {
-        return billingAccountId;
+    public BillingAccountEntity getBillingAccount() {
+        return billingAccount;
     }
 
-    public void setBillingAccountId(BillingAccountEntity billingAccountId) {
-        this.billingAccountId = billingAccountId;
+    public void setBillingAccount(BillingAccountEntity billingAccount) {
+        this.billingAccount = billingAccount;
     }
 }
