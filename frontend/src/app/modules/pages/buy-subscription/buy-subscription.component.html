@@ -1,0 +1,31 @@
+<button type="button" class="btn btn-info" [disabled]="authService.user == null" data-toggle="modal" data-target="#exampleModal"
+        (click)="_openModal(template)">Buy
+</button>
+
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">What wallet will you choose?</h4>
+    <button type="button" class="close pull-right"
+            aria-label="Close" (click)="_closeModal()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <tr *ngFor="let wallet of wallets">
+      <input type="radio" (click)="service.selectedWallet = wallet">
+      <label>
+        Wallet ID: {{wallet.walletId}}
+      </label>
+    </tr>
+    <div class="alert alert-danger">This wallet does not have enough funds
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" (click)="_addSubscription()"
+            >Buy
+    </button>
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="_closeModal()">Close</button>
+
+  </div>
+</ng-template>
+

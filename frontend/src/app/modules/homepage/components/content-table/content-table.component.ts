@@ -4,6 +4,7 @@ import {BsModalRef, BsModalService} from "ngx-bootstrap";
 import { ContentService } from '../../../../services/content/content.service';
 import {Subscription} from "rxjs";
 import {AuthService} from "../../../../services/auth/auth.service";
+import {SubscriptionService} from "../../../../services/subscription/subscription.service";
 
 @Component({
   selector: 'app-content-table',
@@ -23,7 +24,8 @@ export class ContentTableComponent implements OnInit {
 
   constructor(private contentService: ContentService,
               private modalService: BsModalService,
-              private authService: AuthService) { }
+              private authService: AuthService,
+              private subService: SubscriptionService) { }
 
   ngOnInit() {
     this.loadProducts();

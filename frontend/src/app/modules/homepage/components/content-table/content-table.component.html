@@ -26,6 +26,7 @@
           <td>{{content.itemName}}</td>
           <td>{{content.description}}</td>
           <td>{{content.cost}} $ per year</td>
+          <td><app-buy-subscription (click)="subService.selectedProduct = content"></app-buy-subscription></td>
         </tr>
         </tbody>
       </table>

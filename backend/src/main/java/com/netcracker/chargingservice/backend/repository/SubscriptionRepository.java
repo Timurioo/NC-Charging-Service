@@ -1,12 +1,13 @@
 package com.netcracker.chargingservice.backend.repository;
 
+import com.netcracker.chargingservice.backend.entity.BillingAccountEntity;
 import com.netcracker.chargingservice.backend.entity.SubscriptionEntity;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.Date;
+import java.util.List;
 
 @Repository
 public interface SubscriptionRepository extends CrudRepository<SubscriptionEntity, Long> {
-    SubscriptionEntity findByDate(Date date);
+    List<SubscriptionEntity> findByBillingAccount(BillingAccountEntity billingAccount);
 }

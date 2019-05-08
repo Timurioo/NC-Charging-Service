@@ -1,0 +1,30 @@
+<div class="container mt-lg-5" >
+  <div class="row" *ngIf="authService.user && authService.user.role.id == '2'">
+    <div class="col m-1">
+      <button type="button" class="btn btn-dark" (click)="_updateWallet()">Update</button>
+    </div>
+    <div class="col text-md-right m-1">
+      <app-add-wallet></app-add-wallet>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th scope="col">No.</th>
+          <th scope="col">Funds</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let wallet of wallets">
+          <td scope="row">{{wallet.walletId}}</td>
+          <td>{{wallet.funds}} $</td>
+          <input type="radio" (click)="subsService.selectedWallet = wallet">
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

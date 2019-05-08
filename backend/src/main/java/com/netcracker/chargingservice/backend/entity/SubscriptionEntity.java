@@ -1,20 +1,13 @@
 package com.netcracker.chargingservice.backend.entity;
 
 import javax.persistence.*;
-import java.sql.Date;
 
 @Entity
 @Table(name = "subscription", schema = "charging_service")
 public class SubscriptionEntity {
     private Long id;
-    private String product;
-    private Date date;
     private BillingAccountEntity billingAccount;
-
-    public SubscriptionEntity(String product, Date date) {
-        this.product = product;
-        this.date = date;
-    }
+    private ContentEntity content;
 
     public SubscriptionEntity() {
     }
@@ -30,26 +23,6 @@ public class SubscriptionEntity {
         this.id = id;
     }
 
-    @Basic
-    @Column(name = "product")
-    public String getProduct() {
-        return product;
-    }
-
-    public void setProduct(String product) {
-        this.product = product;
-    }
-
-    @Basic
-    @Column(name = "purchase_date")
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -58,8 +31,6 @@ public class SubscriptionEntity {
         SubscriptionEntity that = (SubscriptionEntity) o;
 
         if (id != that.id) return false;
-        if (product != null ? !product.equals(that.product) : that.product != null) return false;
-        if (date != null ? !date.equals(that.date) : that.date != null) return false;
 
         return true;
     }
@@ -73,4 +44,15 @@ public class SubscriptionEntity {
     public void setBillingAccount(BillingAccountEntity billingAccount) {
         this.billingAccount = billingAccount;
     }
+
+    @ManyToOne
+    @JoinColumn(name = "content_id", referencedColumnName = "id", nullable = false)
+    public ContentEntity getContent() {
+        return content;
+    }
+
+    public void setContent(ContentEntity content) {
+        this.content = content;
+    }
 }
+

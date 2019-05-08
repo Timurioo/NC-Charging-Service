@@ -1,0 +1,7 @@
+<button class="btn btn-outline-primary" [routerLink]="['/sign-up']">
+  <div *ngIf="authService.user && authService.user.role.id =='1'">
+    Sign up new user
+  </div>
+  <div *ngIf="authService.user == null">Sign Up</div>
+</button>
+

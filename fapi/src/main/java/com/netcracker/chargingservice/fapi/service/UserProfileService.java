@@ -7,7 +7,7 @@ import java.util.List;
 public interface UserProfileService {
 
     RegisterUser findByEmail(String email);
-    RegisterUser findById(long id);
+    RegisterUser findById(Long id);
     List<RegisterUser> findAll();
     RegisterUser save(RegisterUser user);
     String getUsername(String token);

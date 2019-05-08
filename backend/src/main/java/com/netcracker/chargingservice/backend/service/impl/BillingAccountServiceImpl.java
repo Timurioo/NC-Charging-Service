@@ -1,6 +1,7 @@
 package com.netcracker.chargingservice.backend.service.impl;
 
 import com.netcracker.chargingservice.backend.entity.BillingAccountEntity;
+import com.netcracker.chargingservice.backend.entity.UserProfileEntity;
 import com.netcracker.chargingservice.backend.repository.BillingAccountRepository;
 import com.netcracker.chargingservice.backend.service.BillingAccountService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,15 @@ public class BillingAccountServiceImpl implements BillingAccountService {
 
     @Override
     public BillingAccountEntity saveBillingAccount(BillingAccountEntity account) {
-        return billingAccountRepository.save(account);
+        boolean forComparison = billingAccountRepository.findByWalletId(account.getWalletId()).isPresent();
+        if (account.getWalletId() != null || !forComparison) {
+            return billingAccountRepository.save(account);
+        } else return null;
+    }
+
+    @Override
+    public Iterable<BillingAccountEntity> getAllByUserProfile(UserProfileEntity userProfile) {
+        return billingAccountRepository.findAllByUserProfile(userProfile);
     }
 
     @Override
@@ -32,5 +41,10 @@ public class BillingAccountServiceImpl implements BillingAccountService {
     @Override
     public void deleteBillingAccount(Long id) {
         billingAccountRepository.deleteById(id);
+    }
+
+    @Override
+    public Optional<BillingAccountEntity> getByWalletId(Long walletId) {
+        return billingAccountRepository.findByWalletId(walletId);
     }
 }

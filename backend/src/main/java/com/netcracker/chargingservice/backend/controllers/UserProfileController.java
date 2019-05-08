@@ -22,7 +22,7 @@ public class UserProfileController {
     }
 
     @GetMapping(path="id/{id}")
-    public ResponseEntity<UserProfileEntity> getUserById(@PathVariable(name="id") long id) {
+    public ResponseEntity<UserProfileEntity> getUserById(@PathVariable(name="id") Long id) {
        Optional<UserProfileEntity> user = userProfileService.findById(id);
        return user.map(ResponseEntity::ok).orElse(null);
     }

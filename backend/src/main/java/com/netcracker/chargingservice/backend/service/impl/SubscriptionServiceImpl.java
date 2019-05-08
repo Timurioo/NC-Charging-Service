@@ -1,12 +1,12 @@
 package com.netcracker.chargingservice.backend.service.impl;
 
+import com.netcracker.chargingservice.backend.entity.BillingAccountEntity;
 import com.netcracker.chargingservice.backend.entity.SubscriptionEntity;
 import com.netcracker.chargingservice.backend.repository.SubscriptionRepository;
 import com.netcracker.chargingservice.backend.service.SubscriptionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
 import java.util.List;
 
 @Service
@@ -20,13 +20,13 @@ public class SubscriptionServiceImpl implements SubscriptionService {
     }
 
     @Override
-    public SubscriptionEntity findByDate(Date date) {
-        return subscriptionRepository.findByDate(date);
+    public SubscriptionEntity save(SubscriptionEntity subscription) {
+        return subscriptionRepository.save(subscription);
     }
 
     @Override
-    public SubscriptionEntity save(SubscriptionEntity subscription) {
-        return subscriptionRepository.save(subscription);
+    public List<SubscriptionEntity> findByBillingAccount(BillingAccountEntity billingAccount) {
+        return subscriptionRepository.findByBillingAccount(billingAccount);
     }
 
     @Override

@@ -35,7 +35,7 @@ public class UserProfileServiceImpl implements UserDetailsService, UserProfileSe
     }
 
     @Override
-    public RegisterUser findById(long id) {
+    public RegisterUser findById(Long id) {
         RestTemplate restTemplate = new RestTemplate();
         return restTemplate.getForObject(backendServerUrl + "/api/user/id" + id, RegisterUser.class);
     }

@@ -17,6 +17,7 @@ export class AddWalletComponent {
   public editableWallet: Wallet = new Wallet();
   public modalRef: BsModalRef;
   public editMode = false;
+  public existingWalletId: boolean;
 
   private subscriptions: Subscription[] = [];
 
@@ -48,6 +49,13 @@ export class AddWalletComponent {
     this.subscriptions.push(this.walletService.saveWallet(this.editableWallet).subscribe(() => {
       this.walletTableComponent._updateWallet();
       this._closeModal();
+    }));
+  }
+
+  private isExists(walletId: string): void {
+    this.subscriptions.push(this.walletService.getWalletByWalletId(walletId).subscribe(  isExist => {
+      this.existingWalletId = true;
+      if (!isExist) this.existingWalletId = false;
     }));
   }
 

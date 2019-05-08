@@ -9,4 +9,6 @@ public interface BillingAccountDataService {
     BillingAccount getBillingAccountById(Long id);
     BillingAccount saveBillingAccount(BillingAccount account);
     void deleteBillingAccount(Long id);
+    BillingAccount getBillingAccountByWalletId(Long walletId);
+    List<BillingAccount> getBillingAccountByUser(Long id);
 }

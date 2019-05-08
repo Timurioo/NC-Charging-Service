@@ -9,6 +9,8 @@ import {FormsModule} from '@angular/forms';
 import {PagesModule} from "../pages/pages.module";
 import {AuthService} from "../../services/auth/auth.service";
 import {AddProductComponent} from "../pages/add-product/add-product.component";
+import {BuySubscriptionComponent} from "../pages/buy-subscription/buy-subscription.component";
+import {SubscriptionService} from "../../services/subscription/subscription.service";
 
 @NgModule({
   declarations: [CarouselComponent, ContentTableComponent, LandingComponent],
@@ -22,6 +24,6 @@ import {AddProductComponent} from "../pages/add-product/add-product.component";
   exports: [
     CarouselComponent, ContentTableComponent, LandingComponent, NgbModule
   ],
-  providers: [ContentService, AuthService, AddProductComponent]
+  providers: [ContentService, AuthService, AddProductComponent, SubscriptionService]
 })
 export class HomepageModule { }
