@@ -3,10 +3,13 @@ package com.netcracker.chargingservice.backend.controllers;
 import com.netcracker.chargingservice.backend.entity.BillingAccountEntity;
 import com.netcracker.chargingservice.backend.entity.SubscriptionEntity;
 import com.netcracker.chargingservice.backend.service.BillingAccountService;
+import com.netcracker.chargingservice.backend.service.ContentService;
 import com.netcracker.chargingservice.backend.service.SubscriptionService;
+import com.netcracker.chargingservice.backend.service.UserProfileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -20,8 +23,21 @@ public class SubscriptionController {
     @Autowired
     BillingAccountService billingAccountService;
 
+    @Autowired
+    UserProfileService userProfileService;
+
+    @Autowired
+    ContentService contentService;
+
     @PostMapping(path = "/new")
     public @ResponseBody SubscriptionEntity saveSubscription( @RequestBody SubscriptionEntity subscription) {
+        Integer price = subscription.getContent().getCost();
+        ArrayList<BillingAccountEntity> companyWallet = (ArrayList<BillingAccountEntity>) billingAccountService.getAllByUserProfile(contentService.findByItemName(subscription.getContent().getItemName()).getUserProfile());
+        BillingAccountEntity userWallet = subscription.getBillingAccount();
+        companyWallet.get(0).setFunds(companyWallet.get(0).getFunds() + price);
+        userWallet.setFunds(userWallet.getFunds() - price);
+        billingAccountService.saveBillingAccount(companyWallet.get(0));
+        billingAccountService.saveBillingAccount(userWallet);
         return subscriptionService.save(subscription);
     }
 

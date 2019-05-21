@@ -11,6 +11,8 @@ import {AuthService} from "../../services/auth/auth.service";
 import {AddProductComponent} from "../pages/add-product/add-product.component";
 import {BuySubscriptionComponent} from "../pages/buy-subscription/buy-subscription.component";
 import {SubscriptionService} from "../../services/subscription/subscription.service";
+import {RouterModule} from "@angular/router";
+import {ProductPageBtnComponent} from "../pages/product-page-btn/product-page-btn.component";
 
 @NgModule({
   declarations: [CarouselComponent, ContentTableComponent, LandingComponent],
@@ -19,11 +21,12 @@ import {SubscriptionService} from "../../services/subscription/subscription.serv
     CommonModule,
     FormsModule,
     PagesModule,
-    NgbModule
+    NgbModule,
+    RouterModule
   ],
   exports: [
     CarouselComponent, ContentTableComponent, LandingComponent, NgbModule
   ],
-  providers: [ContentService, AuthService, AddProductComponent, SubscriptionService]
+  providers: [ContentService, AuthService, AddProductComponent, SubscriptionService, ProductPageBtnComponent]
 })
 export class HomepageModule { }

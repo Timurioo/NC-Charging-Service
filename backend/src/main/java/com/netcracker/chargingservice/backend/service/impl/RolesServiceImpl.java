@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class RolesServiceImpl implements RolesService {
@@ -32,4 +33,7 @@ public class RolesServiceImpl implements RolesService {
     public void delete(Long id) {
         rolesRepository.deleteById(id);
     }
+
+    @Override
+    public Optional<RoleEntity> findById(Long id) { return rolesRepository.findById(id); }
 }

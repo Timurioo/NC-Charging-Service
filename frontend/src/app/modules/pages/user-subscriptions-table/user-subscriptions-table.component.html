@@ -1,11 +1,10 @@
 <div class="container mt-lg-5">
   <div class="row">
     <div class="col">
-      <h3 *ngIf="hasAnySubs">You do not have any subs yet</h3>
+      <h3 *ngIf="userSubs == null">You do not have any subs yet</h3>
       <table class="table table-striped" *ngIf="userSubs != null">
         <thead>
         <tr>
-          <th scope="col">Sub #</th>
           <th scope="col">Picture</th>
           <th scope="col">Item name</th>
           <th scope="col">Description</th>
@@ -14,7 +13,6 @@
         </thead>
         <tbody>
         <tr *ngFor="let sub of userSubs">
-          <td scope="row">{{sub.id}}.</td>
           <td><img alt="{{sub.content.itemName}}'s logo" [src]="sub.content.pictureUrl" width="100"></td>
           <td>{{sub.content.itemName}}</td>
           <td>{{sub.content.description}}</td>

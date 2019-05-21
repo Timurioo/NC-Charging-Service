@@ -31,7 +31,7 @@ public class BillingAccountController {
         return ResponseEntity.ok(billingAccountDataService.getAll());
     }
 
-    @PreAuthorize("hasAnyRole('ADMIN', 'USER')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'USER', 'COMPANY')")
     @GetMapping(path = "/user/{id}")
     public ResponseEntity<List<BillingAccount>> getAccountByUser(@PathVariable(name = "id") Long id) {
         List<BillingAccount> billingAccounts = billingAccountDataService.getBillingAccountByUser(id);

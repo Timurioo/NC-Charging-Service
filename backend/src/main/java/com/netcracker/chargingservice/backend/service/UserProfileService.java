@@ -1,5 +1,6 @@
 package com.netcracker.chargingservice.backend.service;
 
+import com.netcracker.chargingservice.backend.entity.RoleEntity;
 import com.netcracker.chargingservice.backend.entity.UserProfileEntity;
 
 import java.util.List;
@@ -12,5 +13,6 @@ public interface UserProfileService {
     UserProfileEntity save(UserProfileEntity user);
     void delete(Long id);
     Optional<UserProfileEntity> findById(long id);
+    List<UserProfileEntity> findByRole(RoleEntity role);
 }
 

@@ -1,5 +1,6 @@
 package com.netcracker.chargingservice.backend.service.impl;
 
+import com.netcracker.chargingservice.backend.entity.RoleEntity;
 import com.netcracker.chargingservice.backend.entity.UserProfileEntity;
 import com.netcracker.chargingservice.backend.repository.UserProfileRepository;
 import com.netcracker.chargingservice.backend.service.UserProfileService;
@@ -42,4 +43,7 @@ public class UserProfileServiceImpl implements UserProfileService {
     public void delete(Long id) {
         userProfileRepository.deleteById(id);
     }
+
+    @Override
+    public List<UserProfileEntity> findByRole(RoleEntity role) { return userProfileRepository.findByRole(role); }
 }

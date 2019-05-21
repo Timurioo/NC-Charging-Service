@@ -1,4 +1,10 @@
 <form class="form-inline my-2 mt-8">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
+  <!--<input class="form-control mr-sm-2" name="searchStr" type="search" placeholder="Search" aria-label="Search"-->
+         <!--[(ngModel)]="searchStr" autocomplete="off" #searchStr="ngModel">-->
+  <!--&lt;!&ndash;<input type="search" class="form-control mr-sm-2" name="searchStr" [(ngModel)]="searchStr"&ndash;&gt;-->
+  <!--&lt;!&ndash;placeholder="Search" #searchStr="ngModel">&ndash;&gt;-->
+  <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="searchProduct(searchStr)">Search</button>-->
+  <input class="form-control mr-sm-2" name="search" type="search" placeholder="Search" aria-label="Search"
+         [(ngModel)]="searchStr" autocomplete="off">
+  <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="searchProduct()">Search</button>
+</form>

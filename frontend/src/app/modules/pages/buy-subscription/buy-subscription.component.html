@@ -1,4 +1,4 @@
-<button type="button" class="btn btn-info" [disabled]="authService.user == null" data-toggle="modal" data-target="#exampleModal"
+<button type="button" class="btn btn-info" *ngIf="authService.user && authService.user.role.id == '2'" triggers="mouseenter:mouseleave" ngbPopover="You should be signed in to buy a subscription" data-toggle="modal" data-target="#exampleModal"
         (click)="_openModal(template)">Buy
 </button>
 
@@ -11,18 +11,18 @@
     </button>
   </div>
   <div class="modal-body">
-    <tr *ngFor="let wallet of wallets">
-      <input type="radio" (click)="service.selectedWallet = wallet">
-      <label>
-        Wallet ID: {{wallet.walletId}}
+    <div class="custom-radio" *ngFor="let wallet of wallets" ngbRadioGroup [(ngModel)]="service.selectedWallet">
+      <label ngbButtonLabel >
+        <input ngbButton type="radio" [value]="wallet">
+        Wallet №{{wallet.walletId}}: {{wallet.funds}}
       </label>
-    </tr>
-    <div class="alert alert-danger">This wallet does not have enough funds
+    </div>
+    <div *ngIf="service.selectedWallet && !isEnoughFunds()" class="alert alert-danger">This wallet does not have enough funds
     </div>
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-default" (click)="_addSubscription()"
-            >Buy
+        [disabled]="!isEnoughFunds()">Buy
     </button>
     <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="_closeModal()">Close</button>
 

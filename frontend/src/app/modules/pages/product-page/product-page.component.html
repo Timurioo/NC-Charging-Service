@@ -1,0 +1,30 @@
+<div class="tab-content no-border padding-24 mt-3">
+  <div class="tab-pane in active">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-offset-md-3 center">
+        <span class="profile-picture justify-content-center ml-2">
+        <img alt="{{subsService.selectedProduct.itemName}}'s logo" [src]="subsService.selectedProduct.pictureUrl"
+             width="250">
+        </span>
+
+        <div class="space space-4">
+
+        </div>
+      </div>
+      <div class="col-md-6 col-offset-md-3 center">
+        <h4 class="blue">
+          <span
+            class="middle mx-auto">{{subsService.selectedProduct.userProfile.firstName}} {{subsService.selectedProduct.itemName}}</span>
+        </h4>
+        <div class="profile-info-row">
+
+          <div class="profile-info-value mx-auto">{{subsService.selectedProduct.description}}</div>
+        </div>
+        <div class="profile-info-value mt-5"><b>Price:</b> {{subsService.selectedProduct.cost}} $ per day</div>
+      </div>
+    </div>
+    <div class="row justify-content-start" *ngIf="authService.user && authService.user.role.id == '2'">
+      <app-buy-subscription></app-buy-subscription>
+    </div>
+  </div>
+</div>

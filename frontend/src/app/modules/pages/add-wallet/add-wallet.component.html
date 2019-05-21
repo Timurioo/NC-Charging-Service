@@ -14,7 +14,7 @@
       <label>Wallet Number</label>
       <input class="form-control" name="walletId" [(ngModel)]="editableWallet.walletId" #walletId="ngModel"
              required pattern="^\d+$" (focusout)="isExists(walletId.value)" (change)="existingWalletId = false"/>
-      <div [hidden]="walletId.valid || walletId.untouched" class="alert alert-danger">
+      <div [hidden]="walletId?.valid || walletId?.untouched" class="alert alert-danger">
         Please provide wallet No.
       </div>
       <div [hidden]="!existingWalletId" class="alert alert-danger">Wallet with such number already exists</div>
@@ -23,8 +23,8 @@
       <label>Funds</label>
       <input class="form-control" name="funds" [(ngModel)]="editableWallet.funds" #funds="ngModel"
              required pattern="^\d+$"/>
-      <div [hidden]="funds.valid || funds.untouched" class="alert alert-danger">
-        Funds cannot be negative. Try again.
+      <div [hidden]="funds?.valid" class="alert alert-danger">
+        Funds cannot be negative or empty. Try again.
       </div>
     </div>
 

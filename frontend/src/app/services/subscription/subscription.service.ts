@@ -11,7 +11,8 @@ import {Content} from "../../models/content";
 export class SubscriptionService {
 
   public selectedWallet: Wallet;
-  public selectedProduct: Content;
+  public selectedProduct: Content
+  public userSubs: UserSubscription[];
 
   constructor(private http: HttpClient) { }
 

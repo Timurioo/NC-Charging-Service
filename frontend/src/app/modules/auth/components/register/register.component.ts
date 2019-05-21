@@ -41,9 +41,15 @@ export class RegisterComponent {
 
 
   public _registerUser(): void {
-    if (this.isCustomer) this.editableUserProfile.role = {id: '2', name: 'user'};
-    else if (this.isCompany) this.editableUserProfile.role = {id: '3', name: 'company'};
-    else this.editableUserProfile.role = new Role();
+    if (this.isCustomer) {
+      this.editableUserProfile.role = {id: '2', name: 'user'};
+    }
+    else if (this.isCompany) {
+      this.editableUserProfile.role = {id: '3', name: 'company'};
+    }
+    else {
+      this.editableUserProfile.role = new Role();
+    }
     this.editableUserProfile.isBlocked = '0';
     this.subscriptions.push(this.userProfileService.saveUserProfile(this.editableUserProfile).subscribe(() => {
       //this._updateUsers();

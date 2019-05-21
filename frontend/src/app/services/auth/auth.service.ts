@@ -5,6 +5,7 @@ import {AuthToken, UserProfile} from 'src/app/models/user-profile';
 import {Router} from "@angular/router";
 import {UserProfileStorage} from "../user-profile/user-profile.storage";
 import {TokenStorage} from "./token.storage";
+import {JwtHelperService} from '@auth0/angular-jwt';
 
 
 const httpOptions = {
@@ -45,6 +46,11 @@ export class AuthService {
   getUser(): Observable<UserProfile> {
     return this.http.get<UserProfile>(this.getUserUrl);
   }
+
+  // public isAuthenticated(): boolean {
+  //   const token = sessionStorage.getItem('AuthToken');
+  //   return !this.jwtHelper.isTokenExpired(token);
+  // }
 
 
   public signIn(loginUser: UserProfile): void {

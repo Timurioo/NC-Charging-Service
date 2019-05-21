@@ -4,6 +4,7 @@ import {Subscription} from "rxjs";
 import {ContentService} from "../../../services/content/content.service";
 import {BsModalRef, BsModalService} from "ngx-bootstrap";
 import {ContentTableComponent} from "../../homepage/components/content-table/content-table.component";
+import {AuthService} from "../../../services/auth/auth.service";
 
 @Component({
   selector: 'app-add-product',
@@ -20,6 +21,7 @@ export class AddProductComponent {
   private subscriptions: Subscription[] = [];
 
   constructor(private contentService: ContentService,
+              private authService: AuthService,
               private modalService: BsModalService,
               private contentTableComponent: ContentTableComponent) { }
 
@@ -42,6 +44,7 @@ export class AddProductComponent {
   }
 
   public _addContent(): void {
+    this.editableContent.userProfile = this.authService.user;
     this.subscriptions.push(this.contentService.saveProduct(this.editableContent).subscribe(() => {
       this.contentTableComponent._updateContent();
       //this.refreshContent();

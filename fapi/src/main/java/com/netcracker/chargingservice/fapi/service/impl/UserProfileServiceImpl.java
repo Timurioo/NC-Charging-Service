@@ -1,6 +1,7 @@
 package com.netcracker.chargingservice.fapi.service.impl;
 
 import com.netcracker.chargingservice.fapi.models.RegisterUser;
+import com.netcracker.chargingservice.fapi.models.UserProfile;
 import com.netcracker.chargingservice.fapi.security.SecurityJwtConstants;
 import com.netcracker.chargingservice.fapi.security.TokenProvider;
 import com.netcracker.chargingservice.fapi.service.UserProfileService;
@@ -80,5 +81,24 @@ public class UserProfileServiceImpl implements UserDetailsService, UserProfileSe
             e.printStackTrace();
         }
         return email;
+    }
+
+    @Override
+    public List<UserProfile> findByRole(Long id) {
+        RestTemplate restTemplate = new RestTemplate();
+        UserProfile[] users = restTemplate.getForObject(backendServerUrl + "/api/user/role/" + id, UserProfile[].class);
+        return users == null ? Collections.emptyList() : Arrays.asList(users);
+    }
+
+    @Override
+    public void blockUser(Long id) {
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.put(backendServerUrl + "/api/user/block/id/" + id, RegisterUser.class);
+    }
+
+    @Override
+    public void activateUser(Long id) {
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.put(backendServerUrl + "/api/user/activate/id/" + id, RegisterUser.class);
     }
 }

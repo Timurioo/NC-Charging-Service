@@ -8,6 +8,8 @@ import {UserProfile} from "../../models/user-profile";
 // Data service
 export class UserProfileService {
 
+  public selectedUser: UserProfile;
+
   constructor(private http: HttpClient) {
   }
 
@@ -29,5 +31,17 @@ export class UserProfileService {
 
   getUserProfileById(id: string): Observable<UserProfile> {
     return this.http.get<UserProfile>('/api/user/id/' + id);
+  }
+
+  getUserProfileByRole(id: string): Observable<UserProfile[]> {
+    return this.http.get<UserProfile[]>('/api/user/role/' + id);
+  }
+
+  blockUser(id: string): Observable<void> {
+    return this.http.put<void>('/api/user/block/id/' + id, null);
+  }
+
+  activateUser(id: string): Observable<void> {
+    return this.http.put<void>('/api/user/activate/id/' + id, null);
   }
 }

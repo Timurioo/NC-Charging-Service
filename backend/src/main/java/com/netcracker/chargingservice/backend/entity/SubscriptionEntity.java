@@ -8,6 +8,7 @@ public class SubscriptionEntity {
     private Long id;
     private BillingAccountEntity billingAccount;
     private ContentEntity content;
+    private Byte isBlocked;
 
     public SubscriptionEntity() {
     }
@@ -21,6 +22,17 @@ public class SubscriptionEntity {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+
+    @Basic
+    @Column(name = "is_blocked")
+    public Byte getIsBlocked() {
+        return isBlocked;
+    }
+
+    public void setIsBlocked(Byte isBlocked) {
+        this.isBlocked = isBlocked;
     }
 
     @Override

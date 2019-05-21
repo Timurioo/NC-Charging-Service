@@ -24,4 +24,14 @@ public class ContentController {
             return ResponseEntity.ok(contentService.saveContent(content));
         return ResponseEntity.notFound().build();
     }
+
+
+    @GetMapping(path="/{itemName}")
+    public ResponseEntity<Content> getProductByItemName(@PathVariable (name = "itemName") String name) {
+        if (name != null) {
+            Content content = contentService.findByItemName(name);
+            return  content != null ? ResponseEntity.ok(contentService.findByItemName(name)) : ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.notFound().build();
+    }
 }

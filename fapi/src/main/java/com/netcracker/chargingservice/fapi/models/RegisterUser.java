@@ -26,11 +26,11 @@ public class RegisterUser {
         this.isBlocked = isBlocked;
     }
 
-    public Byte getBlocked() {
+    public Byte getIsBlocked() {
         return isBlocked;
     }
 
-    public void setBlocked(Byte blocked) {
+    public void setIsBlocked(Byte blocked) {
         isBlocked = blocked;
     }
 

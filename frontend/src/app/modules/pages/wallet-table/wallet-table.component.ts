@@ -49,4 +49,13 @@ export class WalletTableComponent implements OnInit {
       this.wallets = wallets as Wallet[];
     }));
   }
+
+  private addFunds(funds: string): void {
+    this.editableWallet = Wallet.cloneBase(this.subsService.selectedWallet);
+    this.editableWallet.funds = (Number(this.subsService.selectedWallet.funds) + Number(funds)).toString();
+    this.subscriptions.push(this.walletService.saveWallet(this.editableWallet).subscribe( () => {
+    this.refreshWallet();
+    this._updateWallet();
+    }));
+  }
 }

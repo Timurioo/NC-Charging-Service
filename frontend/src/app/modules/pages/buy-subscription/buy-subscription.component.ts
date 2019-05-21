@@ -8,6 +8,7 @@ import {UserSubscription} from "../../../models/user-subscription";
 import {Content} from "../../../models/content";
 import {UserSubscriptionsTableComponent} from "../user-subscriptions-table/user-subscriptions-table.component";
 import {SubscriptionService} from "../../../services/subscription/subscription.service";
+import {isNullOrUndefined} from "util";
 
 @Component({
   selector: 'app-buy-subscription',
@@ -20,6 +21,7 @@ export class BuySubscriptionComponent implements OnInit {
   public wallets: Wallet[];
   public modalRef: BsModalRef;
   public editMode = false;
+  public isEnough: boolean;
 
   private subscriptions: Subscription[] = [];
 
@@ -30,7 +32,6 @@ export class BuySubscriptionComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.loadWallets();
   }
 
   public _closeModal(): void {
@@ -38,6 +39,7 @@ export class BuySubscriptionComponent implements OnInit {
   }
 
   public _openModal(template: TemplateRef<any>): void {
+    this.loadWallets();
     this.modalRef = this.modalService.show(template);
   }
 
@@ -49,11 +51,11 @@ export class BuySubscriptionComponent implements OnInit {
     }));
   }
 
-  private isEnoughFunds(id: string): void {
-    this.subscriptions.push(this.walletService.getWalletById(id).subscribe(wallet => {
-      if (wallet.funds >= this.service.selectedProduct.cost) return true;
-      return false;
-    }));
+  private isEnoughFunds(): boolean {
+    if (!isNullOrUndefined(this.service.selectedWallet) && !isNullOrUndefined(this.service.selectedProduct)) {
+      return this.service.selectedWallet.funds >= this.service.selectedProduct.cost;
+
+    }
   }
 
   private loadWallets(): void {

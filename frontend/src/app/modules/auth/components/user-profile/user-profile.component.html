@@ -2,10 +2,10 @@
   <div id="home" class="tab-pane in active">
     <div class="row">
       <div class="col-xs-12 col-sm-3 center">
-        <span class="profile-picture">
-          <img class="editable img-responsive" alt=" Avatar" id="avatar2"
-               src="http://bootdey.com/img/Content/avatar/avatar6.png">
-        </span>
+        <!--<span class="profile-picture">-->
+          <!--<img class="editable img-responsive" alt=" Avatar" id="avatar2"-->
+               <!--src="http://bootdey.com/img/Content/avatar/avatar6.png">-->
+        <!--</span>-->
 
         <div class="space space-4">
 
@@ -29,10 +29,13 @@
         </div>
         <div class="row">
         </div>
-        <div class="content-justify" *ngIf="authService.user && authService.user.role.id == '1'">
+        <div class="content-justify-start" *ngIf="authService.user && authService.user.role.id == '1'">
           <app-sign-up-btn></app-sign-up-btn>
         </div>
-        <div *ngIf=" authService.user && (authService.user.role.id == '2')"
+        <div class="content-justify-end" *ngIf="authService.user.role.id == '1' && authService.user">
+          <app-user-table-btn></app-user-table-btn>
+        </div>
+        <div *ngIf=" authService.user && authService.user.role.id == '2'"
              class="btn-group mb-1">
           <div ngbDropdown>
             <button type="button" class="btn btn-outline-primary p-2" aria-controls="dropdown-tables"
@@ -45,15 +48,19 @@
             </div>
           </div>
         </div>
-
       </div>
-      <div *ngIf="isWallet">
-        <h4>Your wallets:</h4>
-        <app-wallet-table></app-wallet-table>
-      </div>
-      <div *ngIf="!isWallet">
-        <h4>Your subscriptions:</h4>
-        <app-user-subscriptions-table></app-user-subscriptions-table>
+      <div *ngIf="authService.user && (authService.user.role.id == '2' || authService.user.role.id == '3')">
+        <div *ngIf="isWallet">
+          <h4>Your wallets:</h4>
+          <app-wallet-table></app-wallet-table>
+        </div>
+        <div *ngIf="!isWallet && authService.user.role.id == '2'">
+          <h4>Your subscriptions:</h4>
+          <app-user-subscriptions-table></app-user-subscriptions-table>
+        </div>
+        <div *ngIf="!isWallet && authService.user.role.id == '3'">
+          <app-content-table></app-content-table>
+        </div>
       </div>
     </div>
   </div>

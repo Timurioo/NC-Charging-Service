@@ -6,6 +6,7 @@ import {AuthService} from "../../../services/auth/auth.service";
 import {SubscriptionService} from "../../../services/subscription/subscription.service";
 import {ContentService} from "../../../services/content/content.service";
 import {BuySubscriptionComponent} from "../buy-subscription/buy-subscription.component";
+import {isNullOrUndefined} from 'util';
 
 @Component({
   selector: 'app-user-subscriptions-table',
@@ -16,7 +17,6 @@ export class UserSubscriptionsTableComponent implements OnInit {
 
   public editMode = false;
 
-  public userSubs: UserSubscription[];
   public editableSubscription: UserSubscription = new UserSubscription();
   public hasAnySubs: boolean;
 
@@ -25,8 +25,7 @@ export class UserSubscriptionsTableComponent implements OnInit {
   constructor(private subscriptionService: SubscriptionService,
               private contentService: ContentService,
               private modalService: BsModalService,
-              private authService: AuthService,
-              private buySub: BuySubscriptionComponent) {
+              private authService: AuthService) {
   }
 
   ngOnInit() {
@@ -48,9 +47,11 @@ export class UserSubscriptionsTableComponent implements OnInit {
   }
 
   private loadSubs(): void {
-    this.subscriptions.push(this.subscriptionService.getSubsByWallet(this.subscriptionService.selectedWallet.id).subscribe(subscriptions => {
-        this.userSubs = subscriptions as UserSubscription[];
-      }, err => this.hasAnySubs = false
-    ));
+    if(!isNullOrUndefined(this.subscriptionService.selectedWallet)) {
+      this.subscriptions.push(this.subscriptionService.getSubsByWallet(this.subscriptionService.selectedWallet.id).subscribe(subscriptions => {
+          this.subscriptionService.userSubs = subscriptions as UserSubscription[];
+        }, error => this.hasAnySubs = false
+      ));
+    }
   }
 }

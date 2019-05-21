@@ -4,8 +4,10 @@ public class Subscription {
     private Long id;
     private BillingAccount billingAccount;
     private Content content;
+    private Byte isBlocked;
 
-    public Subscription() { }
+    public Subscription() {
+    }
 
     public Subscription(Long id, BillingAccount billingAccount, Content content) {
         this.id = id;
@@ -37,5 +39,12 @@ public class Subscription {
         this.content = content;
     }
 
+    public Byte getIsBlocked() {
+        return isBlocked;
+    }
+
+    public void setIsBlocked(Byte isBlocked) {
+        this.isBlocked = isBlocked;
+    }
 
 }

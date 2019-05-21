@@ -10,7 +10,7 @@
 
   <p class="h4 mb-4">Sign up</p>
 
-  <div *ngIf=" authService.user && authService.user.role.id == '1'" class="btn-group mb-1">
+  <div *ngIf="authService.user && authService.user.role.id == '1'" class="btn-group mb-1">
     <div ngbDropdown>
       <button type="button" class="btn btn-outline-primary p-2" aria-controls="dropdown-tables" id="dropdown-basic"
               ngbDropdownToggle>User type
@@ -27,7 +27,7 @@
       <!-- First name -->
       <input type="text" class="form-control" name="firstName" [(ngModel)]="editableUserProfile.firstName"
              placeholder="First name" #firstName="ngModel" required>
-      <div [hidden]="firstName.valid || firstName.untouched" class="alert alert-danger">
+      <div [hidden]="firstName?.valid || firstName?.untouched" class="alert alert-danger">
         Please name yourself.
       </div>
     </div>
@@ -35,26 +35,26 @@
       <!-- Last name -->
       <input type="text" class="form-control" name="lastName" [(ngModel)]="editableUserProfile.lastName"
              placeholder="Last name" #lastName="ngModel" required>
-      <div [hidden]="lastName.valid || lastName.untouched" class="alert alert-danger">
+      <div [hidden]="lastName?.valid || lastName?.untouched" class="alert alert-danger">
         Please name yourself.
       </div>
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-4 mx-auto mb-4" *ngIf="isCompany">
+    <div class="col-lg-4 mx-auto mb-4" *ngIf="isCompany && authService.user && authService.user.role.id == '1'">
       <input type="text" class="form-control" name="firstName" [(ngModel)]="editableUserProfile.firstName"
              placeholder="Company name" #firstName="ngModel" required>
-      <div [hidden]="firstName.valid || firstName.untouched" class="alert alert-danger">
+      <div [hidden]="firstName?.valid || firstName?.untouched" class="alert alert-danger">
         Please name the company.
       </div>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-lg-4 mx-auto mb-4" *ngIf="!isCompany">
+    <div class="col-lg-4 mx-auto mb-4" *ngIf="!isCompany && authService.user && authService.user.role.id == '1'">
       <input type="text" class="form-control" name="firstName" [(ngModel)]="editableUserProfile.firstName"
              placeholder="User name" #firstName="ngModel" required>
-      <div [hidden]="firstName.valid || firstName.untouched" class="alert alert-danger">
+      <div [hidden]="firstName?.valid || firstName?.untouched" class="alert alert-danger">
         Please name the user.
       </div>
     </div>

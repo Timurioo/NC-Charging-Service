@@ -1,4 +1,4 @@
-<div class="container mt-lg-5" >
+<div class="container mt-lg-5">
   <div class="row" *ngIf="authService.user && authService.user.role.id == '2'">
     <div class="col m-1">
       <button type="button" class="btn btn-dark" (click)="_updateWallet()">Update</button>
@@ -18,9 +18,25 @@
         </thead>
         <tbody>
         <tr *ngFor="let wallet of wallets">
-          <td scope="row">{{wallet.walletId}}</td>
-          <td>{{wallet.funds}} $</td>
-          <input type="radio" (click)="subsService.selectedWallet = wallet">
+            <td>
+              Wallet ID: {{wallet.walletId}}
+            </td>
+            <td>
+              {{wallet.funds}} $
+            </td>
+            <td>
+              <ng-template #popContent><input class="form-control" type="text" placeholder="amount in $" required
+                                              pattern="^\d+$"
+                                              #funds>
+                <button type="button" class="btn btn-default" (click)="addFunds(funds.value) && p.close()">Submit
+                </button>
+              </ng-template>
+              <ng-template #popTitle>Adding funds</ng-template>
+              <button type="button" class="btn btn-outline-secondary" [autoClose]="false" triggers="manual"
+                      #p="ngbPopover" (click)="p.open()" [ngbPopover]="popContent" [popoverTitle]="popTitle">
+                Add funds
+              </button>
+            </td>
         </tr>
         </tbody>
       </table>

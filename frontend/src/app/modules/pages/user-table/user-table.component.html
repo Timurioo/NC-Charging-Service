@@ -1,0 +1,37 @@
+<div class="container mt-lg-5">
+  <div class="row">
+    <div class="col">
+      <h2 class="mx-auto">All users</h2>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Status</th>
+          <th scope="col">Change status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let user of users">
+          <td>
+            {{user.id}}
+          </td>
+          <td>
+            {{user.firstName}} {{user.lastName}}
+          </td>
+          <td>
+            {{user.isBlocked == "1" ? "Blocked" : "Active"}}
+          </td>
+          <td>
+            <button *ngIf="user.isBlocked == '0'" type="button" class="btn btn-outline-dark" (focus)="userService.selectedUser = user"
+            (click)="blockUser(userService.selectedUser.id)">Block</button>
+            <button *ngIf="user.isBlocked == '1'" type="button" class="btn btn-outline-dark" (focus)="userService.selectedUser = user"
+                    (click)="activateUser(userService.selectedUser.id)">Activate</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

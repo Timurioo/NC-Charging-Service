@@ -18,6 +18,8 @@ import {ContentTableComponent} from "../homepage/components/content-table/conten
 import {AddWalletComponent} from "../pages/add-wallet/add-wallet.component";
 import {WalletTableComponent} from "../pages/wallet-table/wallet-table.component";
 import {HomepageModule} from "../homepage/homepage.module";
+import {UserTableComponent} from "../pages/user-table/user-table.component";
+import {UserTableBtnComponent} from "../pages/user-table-btn/user-table-btn.component";
 
 
 @NgModule({
@@ -38,7 +40,7 @@ import {HomepageModule} from "../homepage/homepage.module";
     SignUpBtnComponent,
     NgbModule
   ],
-  providers: [UserProfileService, AuthService, TokenStorage, UserProfileStorage, AddProductComponent, ContentTableComponent, AddWalletComponent, WalletTableComponent]
+  providers: [UserProfileService, AuthService, TokenStorage, UserProfileStorage, AddProductComponent, ContentTableComponent, AddWalletComponent, WalletTableComponent, UserTableComponent, UserProfileService, UserTableBtnComponent]
 })
 export class AuthModule {
 }

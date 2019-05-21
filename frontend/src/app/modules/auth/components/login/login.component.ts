@@ -19,9 +19,7 @@ export class LoginComponent {
   constructor(private modalService: NgbModal,
               private zone: NgZone,
               private router: Router,
-              private authService: AuthService,
-              private token: TokenStorage,
-              private userProfileStorage: UserProfileStorage) {
+              private authService: AuthService) {
   }
 
 

@@ -24,7 +24,7 @@ public class UserProfileConverterToRegisterUser implements Converter<UserProfile
         registerUser.setLastName(userProfile.getLastName());
         registerUser.setEmail(userProfile.getEmail());
         registerUser.setRole(userProfile.getRole());
-        registerUser.setBlocked(userProfile.getIsBlocked());
+        registerUser.setIsBlocked(userProfile.getIsBlocked());
         registerUser.setPassword(userProfileService.findByEmail(userProfile.getEmail()).getPassword());
 
         return registerUser;

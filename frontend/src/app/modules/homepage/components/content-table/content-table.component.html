@@ -23,10 +23,11 @@
         <tr *ngFor="let content of contents">
           <td scope="row">{{content.id}}.</td>
           <td><img alt="{{content.itemName}}'s logo" [src]="content.pictureUrl" width="100"></td>
-          <td>{{content.itemName}}</td>
-          <td>{{content.description}}</td>
-          <td>{{content.cost}} $ per year</td>
-          <td><app-buy-subscription (click)="subService.selectedProduct = content"></app-buy-subscription></td>
+          <td>{{content.userProfile?.firstName}} {{content.itemName}}</td>
+          <td>{{content.description.slice(0, 50)}}...</td>
+          <td>{{content.cost}} $ per day</td>
+          <td><app-buy-subscription (mouseenter)="subService.selectedProduct = content"></app-buy-subscription></td>
+          <td><app-product-page-btn (mouseenter)="subService.selectedProduct = content"></app-product-page-btn></td>
         </tr>
         </tbody>
       </table>

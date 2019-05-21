@@ -36,7 +36,6 @@ export class AddWalletComponent {
       this.editMode = true;
       this.editableWallet = Wallet.cloneBase(wallet);
     } else {
-      // this.contentTableComponent.refreshContent();
       this.editMode = false;
     }
 

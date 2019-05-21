@@ -26,4 +26,9 @@ public class ContentController {
     public void deleteProduct(@PathVariable Long id) {
         contentService.deleteContent(id);
     }
+
+    @GetMapping(path = "/{itemName}")
+    public @ResponseBody ContentEntity getProductByItemName(@PathVariable (name = "itemName") String name) {
+        return contentService.findByItemName(name);
+    }
 }

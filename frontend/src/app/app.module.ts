@@ -14,21 +14,37 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import {ContentTableComponent} from './modules/homepage/components/content-table/content-table.component';
 import {LandingComponent} from './modules/homepage/components/landing/landing.component';
-import {UserProfileComponent} from './modules/auth/components/user-profile/user-profile.component';
 import {NotFoundComponent} from './modules/layout/components/404/not-found.component';
 import {RegisterComponent} from "./modules/auth/components/register/register.component";
 import {LoginComponent} from "./modules/auth/components/login/login.component";
 import {Interceptor} from "./app.interceptor";
+import {UserTableComponent} from "./modules/pages/user-table/user-table.component";
+import {UserProfileComponent} from "./modules/auth/components/user-profile/user-profile.component";
+import {ProductPageComponent} from "./modules/pages/product-page/product-page.component";
+import {SearchbarComponent} from "./modules/layout/components/searchbar/searchbar.component";
 
 
 const appRoutes: Routes = [
   {path: "", component: LandingComponent},
+  {path: 'all-users', component: UserTableComponent},
   {path: 'table', component: ContentTableComponent},
   {path: 'landing', component: LandingComponent},
-  {path: 'user-profile', component: UserProfileComponent},
-  {path: 'sign-up', component: RegisterComponent},
-  {path: 'sign-in', component: LoginComponent},
-  {path: '**', component: NotFoundComponent}
+  {
+    path: 'product/:id', component: ProductPageComponent
+  },
+  {
+    path: 'user-profile', component: UserProfileComponent
+  },
+  {
+    path: 'sign-up', component: RegisterComponent
+  },
+  {
+    path: 'sign-in', component: LoginComponent
+  },
+  {
+    path: 'search/:name', component: SearchbarComponent
+  },
+  {path: '**', component: NotFoundComponent},
 ];
 
 @NgModule({
@@ -46,7 +62,7 @@ const appRoutes: Routes = [
     ModalModule.forRoot(),
     FormsModule,
     PagesModule,
-    NgbModule
+    NgbModule,
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

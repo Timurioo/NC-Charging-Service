@@ -19,6 +19,10 @@ export class UserProfileComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getUserWallets();
+  }
+
+  public getUserWallets(): void {
     this.walletService.getWalletsByUser(this.authService.user.id).subscribe(wallet => {
         this.wallets = wallet as Wallet[];
       }, err => this.hasAnyWallets = false
