@@ -6,6 +6,7 @@ import {Router} from "@angular/router";
 import {UserProfileStorage} from "../user-profile/user-profile.storage";
 import {TokenStorage} from "./token.storage";
 import {JwtHelperService} from '@auth0/angular-jwt';
+import {SubscriptionService} from "../subscription/subscription.service";
 
 
 const httpOptions = {
@@ -27,7 +28,8 @@ export class AuthService {
   constructor(private http: HttpClient,
               private router: Router,
               private userProfileStorage: UserProfileStorage,
-              private tokenStorage: TokenStorage) {
+              private tokenStorage: TokenStorage,
+              private subsService: SubscriptionService) {
     let user = JSON.parse(this.userProfileStorage.getUserProfile());
     let token = this.tokenStorage.getToken();
     if (user && token) {
@@ -71,6 +73,8 @@ export class AuthService {
     sessionStorage.clear();
     this.user = null;
     this.token = "";
+    this.subsService.selectedWallet = null;
+    this.subsService.selectedProduct = null;
     this.router.navigate(['']);
   }
 }

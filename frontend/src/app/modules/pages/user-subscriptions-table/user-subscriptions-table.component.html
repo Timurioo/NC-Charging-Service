@@ -9,7 +9,19 @@
           <th scope="col">Item name</th>
           <th scope="col">Description</th>
           <th scope="col">Cost</th>
-          <th scope="col">Wallet ID</th>
+          <th scope="col">
+          <div class="btn-group mb-1">
+            <div ngbDropdown *ngIf="userWallets">
+              <button type="button" class="btn p-2" aria-controls="dropdown-tables" id="dropdown-basic"
+                      ngbDropdownToggle>Wallet ID
+              </button>
+              <div id="dropdown-tables" ngbDropdownMenu aria-labelledby="button-basic">
+                <div *ngFor="let wallet of userWallets">
+                <button (click)="(subscriptionService.selectedWallet = wallet) && _updateSubs()" ngbDropdownItem>{{wallet.walletId}}</button>
+                </div>
+              </div>
+            </div>
+          </div></th>
           <th scope="col"></th>
         </tr>
         </thead>
@@ -26,7 +38,7 @@
                 <input class="form-control" type="text" placeholder="amount in $" required
                        pattern="^\d+$"
                        #funds>
-                <button type="button" class="btn btn-default" (click)="addFunds(funds.value) && p.close()">Submit
+                <button type="button" class="btn" (click)="addFunds(funds.value) && p.close()">Submit
                 </button>
               </div>
             </ng-template>

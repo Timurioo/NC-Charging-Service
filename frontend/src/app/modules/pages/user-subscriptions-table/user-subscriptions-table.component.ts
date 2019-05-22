@@ -5,7 +5,7 @@ import {UserSubscription} from "../../../models/user-subscription";
 import {AuthService} from "../../../services/auth/auth.service";
 import {SubscriptionService} from "../../../services/subscription/subscription.service";
 import {ContentService} from "../../../services/content/content.service";
-import {isNullOrUndefined} from 'util';
+import {isNull, isNullOrUndefined} from 'util';
 import {Wallet} from "../../../models/wallet";
 import {WalletService} from "../../../services/wallet/wallet.service";
 
@@ -21,6 +21,7 @@ export class UserSubscriptionsTableComponent implements OnInit {
   public editableSubscription: UserSubscription = new UserSubscription();
   public hasAnySubs: boolean;
   public editableWallet: Wallet = new Wallet();
+  public userWallets: Wallet[] = [];
 
   private subscriptions: Subscription[] = [];
 
@@ -51,11 +52,16 @@ export class UserSubscriptionsTableComponent implements OnInit {
 
   private loadSubs(): void {
     this.subscriptions.push(this.walletService.getWalletsByUser(this.authService.user.id).subscribe(wallets => {
-      if (!isNullOrUndefined(wallets)) this.subscriptionService.selectedWallet = wallets[0];
+      if (!isNullOrUndefined(wallets)) {
+        this.userWallets = wallets as Wallet[];
+        if (this.subscriptionService.selectedWallet == null) this.subscriptionService.selectedWallet = wallets[0];
+      }
       if (!isNullOrUndefined(this.subscriptionService.selectedWallet)) {
         this.subscriptions.push(this.subscriptionService.getSubsByWallet(this.subscriptionService.selectedWallet.id).subscribe(subscriptions => {
-            this.subscriptionService.userSubs = subscriptions as UserSubscription[];
-            this.hasAnySubs = true;
+            if (!isNullOrUndefined(subscriptions)) {
+              this.subscriptionService.userSubs = subscriptions as UserSubscription[];
+              this.hasAnySubs = true;
+            } else this.hasAnySubs = false;
           }, error => this.hasAnySubs = false
         ));
       }
