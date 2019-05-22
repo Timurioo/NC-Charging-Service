@@ -9,4 +9,5 @@ public interface ContentService {
     Content findByItemName(String itemName);
     Content saveContent(Content content);
     void deleteContent(Integer id);
+    List<Content> findAllByUserProfile(Long id);
 }

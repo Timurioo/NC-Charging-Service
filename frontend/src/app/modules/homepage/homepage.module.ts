@@ -13,6 +13,7 @@ import {BuySubscriptionComponent} from "../pages/buy-subscription/buy-subscripti
 import {SubscriptionService} from "../../services/subscription/subscription.service";
 import {RouterModule} from "@angular/router";
 import {ProductPageBtnComponent} from "../pages/product-page-btn/product-page-btn.component";
+import {CompanyContentsPageComponent} from "../pages/company-contents-page/company-contents-page.component";
 
 @NgModule({
   declarations: [CarouselComponent, ContentTableComponent, LandingComponent],
@@ -27,6 +28,6 @@ import {ProductPageBtnComponent} from "../pages/product-page-btn/product-page-bt
   exports: [
     CarouselComponent, ContentTableComponent, LandingComponent, NgbModule
   ],
-  providers: [ContentService, AuthService, AddProductComponent, SubscriptionService, ProductPageBtnComponent]
+  providers: [ContentService, AuthService, AddProductComponent, SubscriptionService, ProductPageBtnComponent, CompanyContentsPageComponent]
 })
 export class HomepageModule { }

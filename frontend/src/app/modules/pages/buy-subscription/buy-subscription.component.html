@@ -1,5 +1,5 @@
 <button type="button" class="btn btn-info" *ngIf="authService.user && authService.user.role.id == '2'" triggers="mouseenter:mouseleave" ngbPopover="You should be signed in to buy a subscription" data-toggle="modal" data-target="#exampleModal"
-        (click)="_openModal(template)">Buy
+        (click)="_openModal(template)" [disabled]="authService.user && authService.user.isBlocked == '1'">Buy
 </button>
 
 <ng-template #template>

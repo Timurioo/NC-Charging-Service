@@ -1,22 +1,43 @@
 <div class="container mt-lg-5">
   <div class="row">
-    <div class="col">
-      <h3 *ngIf="userSubs == null">You do not have any subs yet</h3>
-      <table class="table table-striped" *ngIf="userSubs != null">
+    <div class="col offset-md-1">
+      <h3 *ngIf="subscriptionService.userSubs == null">You do not have any subs yet</h3>
+      <table class="table table-striped" *ngIf="subscriptionService.userSubs">
         <thead>
         <tr>
           <th scope="col">Picture</th>
           <th scope="col">Item name</th>
           <th scope="col">Description</th>
           <th scope="col">Cost</th>
+          <th scope="col">Wallet ID</th>
+          <th scope="col"></th>
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let sub of userSubs">
+        <tr *ngFor="let sub of subscriptionService.userSubs">
           <td><img alt="{{sub.content.itemName}}'s logo" [src]="sub.content.pictureUrl" width="100"></td>
           <td>{{sub.content.itemName}}</td>
           <td>{{sub.content.description}}</td>
           <td>{{sub.content.cost}} $</td>
+          <td>
+            <ng-template #popContent>
+              <div (mouseleave)="p.close()">
+                <div class="mx-auto justify-content-start">Available funds: {{sub.billingAccount.funds}} $</div>
+                <input class="form-control" type="text" placeholder="amount in $" required
+                       pattern="^\d+$"
+                       #funds>
+                <button type="button" class="btn btn-default" (click)="addFunds(funds.value) && p.close()">Submit
+                </button>
+              </div>
+            </ng-template>
+            <ng-template #popTitle>Adding funds</ng-template>
+            <button type="button" class="btn btn-outline-secondary" [autoClose]="false" triggers="manual"
+                    #p="ngbPopover" (click)="p.open()" [ngbPopover]="popContent" [popoverTitle]="popTitle">
+              {{sub.billingAccount.walletId}}
+            </button>
+          <td>
+            <button class="btn-outline-danger btn" (click)="_deleteSubs(sub.id)">Unsubscribe</button>
+          </td>
         </tr>
         </tbody>
       </table>

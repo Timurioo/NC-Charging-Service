@@ -33,4 +33,8 @@ export class ContentService {
   getProductByItemName(name: string): Observable<Content> {
     return this.http.get<Content>('api/content/' + name);
   }
+
+  getProductByCompany(id: string): Observable<Content[]> {
+    return this.http.get<Content[]>('/api/content/company/' + id);
+  }
 }

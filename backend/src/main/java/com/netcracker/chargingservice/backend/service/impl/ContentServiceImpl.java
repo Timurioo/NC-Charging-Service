@@ -1,6 +1,7 @@
 package com.netcracker.chargingservice.backend.service.impl;
 
 import com.netcracker.chargingservice.backend.entity.ContentEntity;
+import com.netcracker.chargingservice.backend.entity.UserProfileEntity;
 import com.netcracker.chargingservice.backend.repository.ContentRepository;
 import com.netcracker.chargingservice.backend.service.ContentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,5 +33,10 @@ public class ContentServiceImpl implements ContentService {
     @Override
     public void deleteContent(Long id) {
         contentRepository.deleteById(id);
+    }
+
+    @Override
+    public List<ContentEntity> findAllByUserProfile(UserProfileEntity userProfile) {
+        return contentRepository.findAllByUserProfile(userProfile);
     }
 }

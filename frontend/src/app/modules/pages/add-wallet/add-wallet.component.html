@@ -23,7 +23,7 @@
       <label>Funds</label>
       <input class="form-control" name="funds" [(ngModel)]="editableWallet.funds" #funds="ngModel"
              required pattern="^\d+$"/>
-      <div [hidden]="funds?.valid" class="alert alert-danger">
+      <div [hidden]="funds?.valid || funds?.untouched" class="alert alert-danger">
         Funds cannot be negative or empty. Try again.
       </div>
     </div>

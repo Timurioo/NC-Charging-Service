@@ -22,7 +22,6 @@ export class SearchbarComponent implements OnInit {
               private router: Router,
               private titleService: Title,
               private subsService: SubscriptionService) {
-    titleService.setTitle("Search");
   }
 
   ngOnInit() {

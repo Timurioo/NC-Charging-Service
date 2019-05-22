@@ -41,4 +41,11 @@ public class ContentServiceImpl implements ContentService {
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.delete(backendServerUrl + "/api/content/" + id);
     }
+
+    @Override
+    public List<Content> findAllByUserProfile(Long id) {
+        RestTemplate restTemplate = new RestTemplate();
+        Content[] contents = restTemplate.getForObject(backendServerUrl + "/api/content/company/" + id, Content[].class);
+        return contents == null ? Collections.emptyList() : Arrays.asList(contents);
+    }
 }

@@ -42,7 +42,7 @@ public class BillingAccountController {
         }
     }
 
-    @PreAuthorize("hasRole('USER')")
+    @PreAuthorize("hasAnyRole('USER', 'COMPANY')")
     @PostMapping(path = "/new")
     public ResponseEntity<BillingAccount> saveAccount(@RequestBody BillingAccount account) {
         if (account != null) {

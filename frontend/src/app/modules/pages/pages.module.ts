@@ -10,15 +10,18 @@ import {BuySubscriptionComponent} from './buy-subscription/buy-subscription.comp
 import {UserTableComponent} from './user-table/user-table.component';
 import {RouterModule} from "@angular/router";
 import {UserTableBtnComponent} from './user-table-btn/user-table-btn.component';
-import { ProductPageComponent } from './product-page/product-page.component';
+import {ProductPageComponent} from './product-page/product-page.component';
 import {SubscriptionService} from "../../services/subscription/subscription.service";
 import {AuthService} from "../../services/auth/auth.service";
-import { ProductPageBtnComponent } from './product-page-btn/product-page-btn.component';
-import { SearchEngineComponent } from './search-engine/search-engine.component';
-import {LayoutModule} from "../layout/layout.module";
+import {ProductPageBtnComponent} from './product-page-btn/product-page-btn.component';
+import {SearchEngineComponent} from './search-engine/search-engine.component';
+import {CompanyContentsPageComponent} from './company-contents-page/company-contents-page.component';
 
 @NgModule({
-  declarations: [AddProductComponent, AddWalletComponent, WalletTableComponent, UserSubscriptionsTableComponent, BuySubscriptionComponent, UserTableComponent, UserTableBtnComponent, ProductPageComponent, ProductPageBtnComponent, SearchEngineComponent],
+  declarations: [AddProductComponent, AddWalletComponent, WalletTableComponent,
+    UserSubscriptionsTableComponent, BuySubscriptionComponent, UserTableComponent,
+    UserTableBtnComponent, ProductPageComponent, ProductPageBtnComponent,
+    SearchEngineComponent, CompanyContentsPageComponent],
   imports: [
     NgbModule,
     CommonModule,
@@ -35,7 +38,7 @@ import {LayoutModule} from "../layout/layout.module";
     UserTableBtnComponent,
     ProductPageComponent,
     ProductPageBtnComponent,
-    SearchEngineComponent
+    CompanyContentsPageComponent
   ],
   providers: [BuySubscriptionComponent, UserTableComponent, SubscriptionService, AuthService]
 })

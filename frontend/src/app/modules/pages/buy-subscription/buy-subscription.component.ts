@@ -46,6 +46,7 @@ export class BuySubscriptionComponent implements OnInit {
   public _addSubscription(): void {
     this.editableSubscription.content = this.service.selectedProduct;
     this.editableSubscription.billingAccount = this.service.selectedWallet;
+    this.editableSubscription.isBlocked = '0';
     this.subscriptions.push(this.service.savSubs(this.editableSubscription).subscribe(() => {
       this._closeModal();
     }));
