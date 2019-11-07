@@ -5,7 +5,6 @@ import {AuthToken, UserProfile} from 'src/app/models/user-profile';
 import {Router} from "@angular/router";
 import {UserProfileStorage} from "../user-profile/user-profile.storage";
 import {TokenStorage} from "./token.storage";
-import {JwtHelperService} from '@auth0/angular-jwt';
 import {SubscriptionService} from "../subscription/subscription.service";
 
 

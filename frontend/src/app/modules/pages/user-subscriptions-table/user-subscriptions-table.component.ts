@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {BsModalService} from "ngx-bootstrap";
-import {Subscription} from "rxjs";
+import {BsModalService} from 'ngx-bootstrap';
+import {Subscription} from 'rxjs';
 import {UserSubscription} from "../../../models/user-subscription";
 import {AuthService} from "../../../services/auth/auth.service";
 import {SubscriptionService} from "../../../services/subscription/subscription.service";
